@@ -1,0 +1,43 @@
+
+#LaaS: infraestructura como servicio
+    SE PUEDE PERSONALIZAR
+    //Ram
+    //Prosesador
+    //SistemaOperativo
+    //valocidad de trasmision
+    SE ACCEDE POR MEDIO DE UN SOFTWARE EN INTERNET
+    //AWS
+    //Microft azure
+
+#Paas: plataforma como servicio
+    //no se puede personalizar el tipo de esrvidores
+    //tiene un entorno de desarrolo listo
+    //solo hay que prgramar la app
+    //infraestructura fisica configurada y virtualizada
+    //con sus sistemas operativos
+    //con sus sitemas de bases de datos
+    //con erramientas de diseño y desarrollo
+    //soporte tecnico
+    //azure
+    //google cloud: App engine
+    //openShift de red hat
+
+#Saas: software como servicio
+    //Cualquier servicio basado en la web
+    //uso inmediato con interfaz grafica
+    //nada de despliegues ni mantenimientos
+    //netflix
+    //gmail
+    //zoom
+    //drive
+    //mega
+
+
+#MODULO 1: QUE ES LA NUBE, VENTAJAS E INCONVENIENTES.
+
+#MODULO 2: COMO SE ORGANIZA LA NUBE.
+    %GESTION------
+    %gestion del servicio una vez desplegado hay que gestionarlo
+    %automatizar procesos , backups, reiniciar un entorno, porder escoger entornos y moverlos redimensionarlos
+    %consola de administracion
+    %poder gestionar los datos de forma automatica

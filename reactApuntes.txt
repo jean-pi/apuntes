@@ -33,7 +33,7 @@
         /contenedor para el elemento(o componente)
     --¡¡PARA USAR "ReactDOM" hay que importarlo!!
 
-
+Extension React developed tools 
 
 $npx create-react-app mi-app
     --se inicia git tambien con este comando

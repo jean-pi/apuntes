@@ -1,0 +1,4 @@
+
+-Destructuracion
+-operador spread..
+-manejo de errores 

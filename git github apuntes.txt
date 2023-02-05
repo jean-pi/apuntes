@@ -1,4 +1,4 @@
-
+	
 $ git --version
 
 $ git config --global user.name "Jean Pierre Veliz"
@@ -50,7 +50,7 @@ $ git log --oneline o $ git log // muestra historial de commits y info (se lase 
 
 //PUSH
 $ git remote add origin htpps:repositoriogithub
-$	  // la primera vez: -u se crea una rama , origin donde sera creada, master nombre de la ramma
+$ git push -u origin main // la primera vez: -u se crea una rama , origin donde sera creada, master nombre de la ramma
 $ git push origin main // origin--nombre del servidor  main--rama en la que estoy  ESTO ES PARA SUBIR AL SERVIDOR
 $ git remote -v //muestra la direccion del servidor
 $ git remote //muestra el name del servidor asociado // $ 	git remote rename "newName"

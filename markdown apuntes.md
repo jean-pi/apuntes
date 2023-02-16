@@ -49,6 +49,12 @@
 
 ![gato blanco](/responsive%20design%20y%20arquitectura%20CSS/img/google403px.svg.png "gato blanco")muestra texto y un texto con el cursor arriba
 
+---
+
+|Columna 1|Columna 2|
+|--------|--------|
+|    A    |    B    |
+|    C    |    D    |
 
 
 

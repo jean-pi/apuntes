@@ -144,3 +144,16 @@
 ## FUNCIONES DE BUSQUEDA
 
 #### INDEX (INDICE)
+
+
+#### MATCH(COINCIDIR)
+    Acepta una celda de busqueda y un array de datos, tipo de coincidencia  1-menor que; 0-coincidencia exacta -1-mayor que
+    Devolvera la ubicacion de la busqueda
+
+#### EXACT
+
+#### VLOOKUP
+
+#### HLOOKUP
+
+#### XLOOLUP

@@ -92,7 +92,7 @@
 #### SUM
     sum() suma
 
-### average (promedio)
+### AVERAGE(PROMEDIO)
     =average() 
     =averageif()
 
@@ -139,7 +139,7 @@
     1do parametro: cuantas veces
 #### SPLIT 
     se usa para separar cadenas de texto
-    es mas comoda usar la interfaz grafica DATOS/TEXTO EN COLUMNAS
+    es mas comoda usar la interfaz grafica DATOS/HERRAMIENTAS DE DATOS/ TEXTO EN COLUMNAS
 
 ## FUNCIONES DE BUSQUEDA
 

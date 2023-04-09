@@ -49,7 +49,14 @@
 
 ## SCRUM
 
-    SPRINT Y BACKLOG: saber que tareas se van a realizar primero y colocarles un periodo de tienpo que por lo general son semanas 1 o 2.
+- Quienes conforman un equipo scrum
+    1. Product owner: una persona que entiende que es lo  que se nesecita solucionar primero. debe estar preocupado de maximizar el negocio y el valor del producto.
+    2. dev team: equipo que solucionara la tarea con calidad,y eficacia tecnica
+    3. scrum master: ayudara al equipo y medira la eficacia del dev team
+
+(Al final del ciclo de desarrolo de una tarea se debe hacer una retroalimentacion)
+
+SPRINT Y BACKLOG: CICLOS RAPIDOS PRIORITARIOS saber que tareas se van a realizar primero y colocarles un periodo de tienpo que por lo general son semanas 1 o 2.
 
     ROLES:
 
@@ -81,6 +88,8 @@
     __Aumentar las estructuras Con un mayor enfoque en la comunicación y la colaboración entre equipos, se fomenta un crecimiento consciente del negocio con un enfoque en la calidad.
 
     __Mejorar todo Finalmente, se buscan mejoras constantes y los errores deben verse como oportunidades de mejora. Con esto, es posible apalancar el negocio de una manera sostenible y predecible
+
+
 
 
     #Entre los ejemplos más famosos de uso de una estrategia de Gestión 3.0 se encuentra Google, que proporciona el 20% del tiempo para que las personas desarrollen proyectos que consideran relevantes para las mejoras en sus sectores o en la empresa (Energizar personas).

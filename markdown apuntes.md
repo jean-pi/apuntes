@@ -23,7 +23,7 @@
 <code>  
     let = obtiene datos = () =>{
     }
-<code>
+</code>
 
 
     cuatro espacios para bloques de texto

@@ -66,12 +66,9 @@ SPRINT Y BACKLOG: CICLOS RAPIDOS PRIORITARIOS saber que tareas se van a realizar
 - ¿tu empresa nesesita ser agile?
     1. ¿la informacion que maneja tu negocio es volatil?: 
     si la informacion es muy cambiante si conviene aplicar Agile , si la informacion es fija y se puede marcar objetivos a largo plazo con esa info esntonces no
-    2. Si el trabajo echo por la empresa nesesita ser probado corregudo y aprobado constantemente si conviene aplicar agile
+    2. Si el trabajo echo por la empresa nesesita ser probado corregido y aprobado constantemente si conviene aplicar agile
 
----
 
-    "La gestión es demasiado importante para dejarla solo a los gerentes".
-    La cita anterior es de Jurgen Appelo. Es un gerente holandés, escritor, orador
 
     -Uno de los objetivos de Gestión 3.0 es involucrar a los empleados y, por lo tanto, acelerar el crecimiento del negocio, con todos en la empresa centrados en un objetivo común: entregas rápidas, efectivas y ágiles para crear productos increíbles. Esto también reduce la rotación de personal y aumenta la satisfacción.
     -las personas deben ser el activo más importante de la organización.
@@ -79,11 +76,11 @@ SPRINT Y BACKLOG: CICLOS RAPIDOS PRIORITARIOS saber que tareas se van a realizar
     Las 6 visiones para el éxito con Management 3.0 son las siguientes:
     __Energizar personas Para que la estrategia sea exitosa, es importante involucrar a las personas y mantenerlas siempre creativas y motivadas para hacer lo mejor.
 
-    __Capacitar personas Los equipos deben estar autoorganizados y, por lo tanto, necesitan autorización y confianza de la gerencia.
+    __Capacitar personas Los equipos deben estar auto organizados y, por lo tanto, necesitan autorización y confianza de la gerencia.
 
     __Alinear restricciones Si bien se alienta a los equipos a autogestionarse, es importante traer reglas y limitaciones para que una mayor libertad no se vuelva tóxica para la empresa.
 
-    __Desarrollar habilidades Un equipo, dado que se autoorganiza, también debe ser autosuficiente. Por esta razón, es necesario capacitar a los empleados y también se pueden crear equipos multidisciplinarios, en los que todos puedan hacer su parte para avanzar en un proyecto.
+    __Desarrollar habilidades Un equipo, dado que se auto organiza, también debe ser autosuficiente. Por esta razón, es necesario capacitar a los empleados y también se pueden crear equipos multidisciplinarios, en los que todos puedan hacer su parte para avanzar en un proyecto.
 
     __Aumentar las estructuras Con un mayor enfoque en la comunicación y la colaboración entre equipos, se fomenta un crecimiento consciente del negocio con un enfoque en la calidad.
 

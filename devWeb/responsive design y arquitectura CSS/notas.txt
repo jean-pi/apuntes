@@ -17,3 +17,17 @@ para paginas que se van a imprimir cm,mm,in
 em,rem,ex para tamaño de fuentes, MEJOR ES EL REM
 o para margin o paddings REM
 
+
+
+28/06/23
+-normalize
+-crear root de -colores, - clases con textos predefinidos(en toda una web no se usan muchos tipos de texto), -clases para elementos que se repiten mucho
+-crear un div principal para poder modificar el width general si lo deseo
+-creo que me gustan mas las web que ocupan el 100% 
+-mantener la proporcion de los elementos
+-el texto no cambia de tamaño
+-elementos que no son imagenes, como pequeños texto, iconitos, pequeños botones siempre mantienen su tamaño, para ecajar maximo el texto debe quebrarse y ya 
+-pensar en cada elemeto con una unidad que no debe ser afectado por otros elementos
+-las imagenes se las cambian a una mas adecuada para el tamaño de la pantalla con el atributo de las imagenes 
+##Esto se ocupa mas en paginas tipo off-wite.com zara.com con esa estetica
+##paginas como coinmarkercap.com tienen un div principal que limita la web hasta 1400px por ejemplo(menos el header) ya que es mas practico

@@ -23,7 +23,7 @@ o para margin o paddings REM
 -normalize
 -crear root de -colores, - clases con textos predefinidos(en toda una web no se usan muchos tipos de texto), -clases para elementos que se repiten mucho
 -crear un div principal para poder modificar el width general si lo deseo
--creo que me gustan mas las web que ocupan el 100% 
+-creo que me gustan mas las web que ocupan el 100% que no tienen un div general que las limita por ejemplo a 1400px
 -mantener la proporcion de los elementos
 -el texto no cambia de tamaño
 -elementos que no son imagenes, como pequeños texto, iconitos, pequeños botones siempre mantienen su tamaño, para ecajar maximo el texto debe quebrarse y ya 

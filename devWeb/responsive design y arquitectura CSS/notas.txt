@@ -31,3 +31,48 @@ o para margin o paddings REM
 -las imagenes se las cambian a una mas adecuada para el tamaño de la pantalla con el atributo de las imagenes 
 ##Esto se ocupa mas en paginas tipo off-wite.com zara.com con esa estetica
 ##paginas como coinmarkercap.com tienen un div principal que limita la web hasta 1400px por ejemplo(menos el header) ya que es mas practico
+
+
+
+
+
+1.aprender bien flexbox. postdata como que los elementos en flex tienden a contraerse a lo 
+minimo y no se puede utilizar mim-width y asi min max
+
+2.piensa en los elemntos css como bloques independientes que no dependan de elementos padres 
+esto para facilitar la reutilizacion
+
+3.aprender bien Grid css
+
+4.CLS esos espacios que hacen que la pagina se mueva al cagar y son molestos----------------
+-como solucionar:https://web.dev/optimize-cls/?utm_source=lighthouse&utm_medium=lr#images-without-dimensions
+
+5.Aprender a seleccionar que elementos quiro que se guarden en el cache esto para que sea mas rapida la pagia
+
+6.efecto hover que a activar se muestra un cuadrito de texto con after----------------
+<p>Here we have some
+  <span tabindex="0" data-descr="collection of words and punctuation">text</span> with a few
+  <span tabindex="0" data-descr="small popups that appear when hovering">tooltips</span>.
+</p>
+span[data-descr] {
+  position: relative;
+  text-decoration: underline;
+  color: #00F;
+  cursor: help;
+}
+
+span[data-descr]:hover::after,
+span[data-descr]:focus::after {
+  content: attr(data-descr);
+  position: absolute;
+  left: 0;
+  top: 24px;
+  min-width: 200px;
+  border: 1px #aaaaaa solid;
+  border-radius: 10px;
+  background-color: #ffffcc;
+  padding: 12px;
+  color: #000000;
+  font-size: 14px;
+  z-index: 1;
+}

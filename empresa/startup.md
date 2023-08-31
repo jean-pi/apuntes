@@ -49,3 +49,18 @@
 ### Acelerar, crecer e innovar
     investigar 
 
+### Business model canvas
+
+### Fuentes de ingreso
+	Cuota, suscripcion, como ganan las operadoras, como ganan los fabricantes de behiculos, licencias, activoa, prestamo , alquiler, anuncios, gastos de corretage
+
+### Recursos claves
+	humano fisico, intelectual, economico, identificar recursos claves
+
+### Actividades claves
+	Las actividades clave son las acciones más importantes que una empresa debe realizar para lograr su correcto funcionamiento.
+
+### Asociaciones claves
+	Las asociaciones clave permiten describir nuestra red de proveedores y socios que necesitamos para que todo funcione, optimizando el modelo de negocio y reduciendo el riesgo.
+
+### Estructuras de costos

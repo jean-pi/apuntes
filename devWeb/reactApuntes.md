@@ -1,5 +1,53 @@
 # React Apuntes
 
+
+## Javascript para react
+
+>Programacion orientada a objetos
+>arreglos y metodos actuales de ecmaScript6 para trabajar con arreglos
+>pasar por referencia: hacer un copy paste de un arreglo es diferente a hacer una referencia de este arreglo
+>DOM
+>Eventos : 
+>Asicronismo
+
+
+## React 
+> create-react-app: para crear proyecto basico, se peude crear un propia configuracion con webPack, babel para iniciar mi propio proyecto
+>JSX
+>EVENTOS
+>COMPONENTES
+>PROPS
+>Estado
+>cliclo de vida
+>Hooks basicos: useState useEffetc
+
+MAS AVANZADO
+>Context: amplia el concepto de estado.
+>Refs
+>useMemo: hooks menos usado
+>useReduce: hooks menos usado
+>Custom hook
+>solicitudes Http
+>hoc - high order Components: arquitectura 
+>portals: arquitectura
+>tipado
+
+
+>TESTING
+>LIBRERIAS MARA MEJOS DE ESTADO PARA APP GRANDES
+
+ECOSISTEMA DE REACT
+>react-router
+>next.js/SSR: server side renderig
+>Gapsby/SSG: stati side generator
+>Apollo/graphQL: desarrollo de apis echo por facebool
+>Axios/HTTP: manejos de solitude y fechting de datos mas complejos
+>React-query/HTTTP: manejos de solitude y fechting de datos mas complejos
+>Style-componet: agregar css a componentes para evitar tener archivos css, opcional tambien se podria implementar sass
+>React native 
+
+
+
 ## Iniciar un proyecto react
 > instalar react, descargar *nodeJS* y con esto de descarga *npm* :
 ```
@@ -12,12 +60,15 @@ En la consola de node: npm start
 
 
 
+
+
+
 ---
 ## Componentes
 + ### Hay dos tipos de componentes
     -  FUNCIONALES:
         + Funcion de js/ES6 que retorna un elemento React(JSX)
-        + Seusan mucho
+        + Se usan mucho
         +  Debe comenzar con una letra minuscula
         +  No se pueden utilizar props de elementos hijos en casos de un componente dentro de otros componentes
     -  DE CLASE
@@ -32,6 +83,7 @@ En la consola de node: npm start
 ---
 ## Estado
 #### conjuntos de propiedades de un "componente" y sus valores actuales
+#### para usar el esatdo debo de importarlo
 ---
 ## Hook
 #### Funcion especial que fue creada para administrar los estados de los componentes.

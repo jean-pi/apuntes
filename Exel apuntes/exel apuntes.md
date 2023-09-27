@@ -20,6 +20,8 @@
 [libro exel de apuntes](./Libro1.xlsx)
 
 
+
+
 # Error functions
 
     #value! : values incompatibles
@@ -195,7 +197,7 @@ Un técnico informático no solo trabaja cuando algo grave como un ciberataque o
     se pueden ver numeros pero puede que no esten en formato numero
     1. los mismos pasos que la anterio pero con la funcion =VALOR()
 
-    PASAR PRECIOS A TIPO DE DATO "CONTABILIDAD"
+    PASAR PRECIOS A TIPO DE DATO "CONTABILIDAD"??
 
     AGREGAR FILA DE TOTALES A FINAL DE LA TABLA
     1. Diseño de tabla/ Opciones de estilo de tabla/ fila de totales
@@ -207,21 +209,129 @@ Un técnico informático no solo trabaja cuando algo grave como un ciberataque o
 
     Para iniciar nesesito un origen de datos , esta puede ser de una fuente externa o una hoja de exel con una tabla de datos
 
-
-    CREAR LA TABLA (DINAMICA)
+    CREAR LA TABLA (DINAMICA)---------------------------------------------
     1. Insertar/ tablas/ tabla dinamica
     2. seleccionar si la quiero en lamisma hoja o una aparte
 
-    Crar paginas separadas para cada filtro, poder mostar una pagina por cada proviencias en las que hubo ventas
+    Crar paginas separadas para cada filtro------------------------------------
+    poder mostar una pagina por cada provincia en las que hubo ventas
     Analizar tabla dinamica/ tabla dinamica/ Opciones/ mostar paginas de filtros de informe 
 
-    Crear graficos de la info
+    Crear graficos de la info-------------------------------------
     Analizar tabla dinamica/ Herramientas/Grafico dinamico
 
-    Crear filtros con botones
+    Crear filtros con botones cuadrito con las opciones-------------------------------
+    segmentacion de datos
     Analizar tabla dinamica/ insertar/segmentacion de datos
 
-    Insertar una escala de tiempo
+    Segmentacion de datos con dos tablas dinamicas con varias tablas conectadas-------------------------------
+    Segmentacion/ segmentacion de datos/ conexiones de informe/Conexiones de informes
+
+    Insertar una escala de tiempo-----------------------------------------
     Analizar tabla dinamica/ insertar/insertar escala de tiempo
+
+    Agregar dos capos en fila----------------------------------------
+    Al colocar dos campos en filas se ve medio raro ,
+    ir a Diseño/Diseño/Diseño de informe/ Mostrar en formato esquema
+    ir a Diseño/Diseño/Diseño de informe/ Repetir todas las etiquetas
+    , con esto se visualiza mejor
+
+    Modificar subtotales---------------------------------
+    Diseño/ Diseño/ Subtotales
+    Puedo colocar un subtotal por cada elemento y modificar los totales generales y demas
+
+    Seleccionar muchos datos especificos---------------------------
+    Querer seleccionar todos los totales para cambiarles el color , o solo quiero seleccionar ciertas columnas o filas.
+    ir a Analizar/ Acciones/ Seleccionar/ habilitar edicion = esto mostrara una flecha en las celdas y si se hace clic se seleccionara todas las celdas iguales
+     ir a Analizar/ Acciones/ Seleccionar/ toda la tabla = luego de esto ir otra vez a las mismas opciones
+
+    Mover una tabla dinamica-----------------------------
+    Analizar tabla dinamica/ Acciones/ mover tabla dinamica
+
+ 
+## Ordenar campos de tablas dinamicas
+
+    Ordenar de mayor a menor-------------------
+    Seleccionar el campo a ordenar , clic/ ordenar/ de mayor a menor
+
+    Se puede ordenar con un orden personalizado, eligiendo campos con el clic y soltandolos ----------------------------
+
+    Se puede ordenar por fechas- meses - trimestres - anual --------------------
+
+    Agrupar por varios grupos personalizados--------------------------
+    Ctrl / clic sobre los integrantes del grupo/ clic derecho / agrupar
+
+    Crear una tabla nueva con detalles especificos-----------------------
+    Hcer dos clic sobre la info que quiero ver a detalles
+
+
+## Hacer calculos con tablas dinamicas
+
+    Cambiar del formato: numero, moneda, contabilidad, -----------------------
+    1-ir a los 4 cuadritos de "campos de la tabla dinamica"
+    2-Hacer clic sobre un campo
+    3-Comfiguracion de campo de valor
+    4-esquina inferior izquierda "formato de numero"
+
+    Cambiar el mensage de error de posibles errores---------------------------------------------
+     aveces no es que haya un error si no que hay errores por falta de datos o no coincide algo y se ve feo el "ERROR===000!"
+    1-analizar tabla dinamica
+    2-tabla dinamica
+    3-opciones
+    4-para valores erroneos motrar
+    5-colocar "---" o lo que sea
+
+
+    Crear un campo calculado------------------------------
+    nesesino mostrar un calculo pero el calculo no viene echo desde los datos de origen asi que: 
+    1.creo el campo con el calculo desde la fuente de datos esto va a hacer que este en el origen y en la tabla dinamica
+    2. Creo el calculo directamente en la tabla dinamica sin modificar la fuente de datos:
+    Analizar tabla dinamica/Calculos/ Campos elementos y conjuntos/ campo calculado
+    --aqui puedo sacar funciones, y calculos simples
+
+
+    Hacer una comparacion de ganancias con el mes anterior--------------------------------
+    investigar
+
+## Demas
+
+    Relcacionar varias tablas dinamicas------------------------------
+    investigar
+
+    Crear una tabla dinamica con un grafico automaticamento solo con una simple tabla------------------------
+    Inicio / Analisis / Analisis de datos / 
+    Se mostraran varios graficos y ahi se puede seleccionar que datos mostrar y que no, y muchas otras opciones
+    Esto creara una tabla dinamica y un grafico en una hoja aparte
+
+
+***
+
+### Exel comtabilidad
+
+## Cuenta de PYG(perdidas y ganancias): Ingresos
+
+
+    Analisis de ingreso con formato condicional-----------------
+    Inicio / estilos / formato condicional
+
+    hacer sumas, promedio, min ,max y mas rapido----------------------
+    Inicio / Edicion / simbolo de suma
+
+    Funcion PRONOSTICO-----------------------   
+
+## Cuenta de PYG: Gastos
+
+    Funcion sumar.si---------------------
+    Util para hacer sumas que solo coincidan con un dato: solo suma las que tienen un 21% de iva; solo suma las ventas de pepe, etc
+    SUMAR.SI(criterio de filtro, casilla donde este el dato que va a coincidir co el criterio, valores nuemricos de todos los criterios para sumar
+    
+    
+
+
+
+
+
+
+
 
 

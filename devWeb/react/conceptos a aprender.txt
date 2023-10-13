@@ -1,0 +1,20 @@
+BASICOS A ENTENDER
+//routing ######
+//imports dinamicos, slacy loadign, suspense y espliting ya vine echo en nextjs?
+//hooks personalizados y otros hooks como useContext() vs redux, useMemo(), context() #####
+//accesibilidad
+//crear cookies #####
+//administrar chache #####
+
+
+
+
+
+
+
+SIGUINETE PASOS
+//ARQUITECTURAS: CLEAN-ARQUITECTURE / SWR(manejo de cache, no volver a renderizar la info que tengo en chache?)
+//debo apprender a filtrar, es muy pedido en prueba tecnica
+//inmutabilidad
+//Estados con redux o useReduce()nativo de react?
+//axios

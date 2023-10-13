@@ -1,7 +1,0 @@
-
--Destructuracion
--operador spread..
--manejo de errores 
-    //los errores paran la ejecucion de toda la aplicacion y esto jamas debe pasar
--estructuras de datos:
-    //array, grafos, pilas, listas enlazadas, arbol

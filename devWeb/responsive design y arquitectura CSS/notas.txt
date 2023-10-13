@@ -2,6 +2,14 @@
 2.-La Especificidad
 3.-La Herencia
 
+
+
+https://uxdesign.cc/the-ultimate-guide-to-proper-use-of-animation-in-ux-10bd98614fa9
+
+//ui/ux: Conocimientos en Figma, Sketch, Mailchimp/Perfit, Hotjar (deseable), Paquete Adobe, Google slides
+
+
+
 Navegadores de Microsoft -ms-
 Firefox -moz-
 Todos los demás navegadores -webkit-

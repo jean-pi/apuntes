@@ -14,6 +14,8 @@ BASICOS A ENTENDER
 
 SIGUINETE PASOS
 //ARQUITECTURAS: CLEAN-ARQUITECTURE / SWR(manejo de cache, no volver a renderizar la info que tengo en chache?)
+//ARQUITECTURAS: Arquitectura orientada a eventos
+//ARQUITECTURAS: Arquitectura orientada a observables Rxjs (compartir eventos con obserbables, generar eventos y que reaccionen otros componentes)
 //debo apprender a filtrar, es muy pedido en prueba tecnica
 //inmutabilidad
 //Estados con redux o useReduce()nativo de react?

@@ -35,12 +35,23 @@
 
 ## UseContext()
 >No maneja estados globales, solo sirve para compartir informacion (puede ser estados) no muy compleja o grande entre componentes y asi evitar 
+
 >Pasar props a componentes hijos , evitanto el Prop Drilling.
 
->Redux si maneja estados globales, sirve para compartir bastante informacion que estare usando por toda la app.
+##### Metodos de compartir informacionm entres componentes
+>1.caso de uso de redux: Cuando hay data que la uso en toda mi app, es una entidad , ejemplo, carrito de compra.
 
->es mejor usar un custon hook que useContext(); AVECES O ESO CREO https://www.youtube.com/watch?v=I7dwJxGuGYQ&
-ab_channel=ByteGrad
+>2.useContext(): Segun gentlenman programing, usa useContext() para compartir informacion entre componentes que estan en la misma vista(pages)
+
+>3.Rxjs: para algo tan sencillo como enviar un envento entre componentes, no es necesario crear contextos ni nada
+
+>Segun gentlenman programing, no se debe simular el comportamiendo de redux, con un useReducer() y context()
+
+>es mejor usar un custon hook que useContext(); AVECES O ESO CREO https://www.youtube.com/watch?v=I7dwJxGuGYQ&ab_channel=ByteGrad
+
+> la menjor manera de usar context(): min 1:01:20
+>https://www.youtube.com/watch?v=USm-uiVyTuQ&ab_channel=GentlemanProgramming
+
 
 >PRINCIPIO: Puedo generar un contexto, y crear estados dentro de este contexto , esto permite a los componentes acceder a todos los estados que le pasemos al contexto, (los elementos hijos de los elementos que estan dentro del contexto tambien puden acceder al los estados del contexto), sin hacer un import o pasar props a componentes hijos. Esto evita el prop drilling
 

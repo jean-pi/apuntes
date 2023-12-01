@@ -18,12 +18,50 @@
 
 
 
-// EN TYPESCRIPT TENER MU EN CUENTA
+
+
+
+// ESTE ES TODO EL TypeScript Que piden en una entrevista tecnica (en teoria)
+
+
+//LA FORMA EN LA QUE ESTA ESTRUCTURADO TYPESCRIPT ------------------------------------------------------------------------------------------------------------
+
+console.log("--------------------------------------------------------")
+ class moto1 {
+    cilindraje: number;
+    color: string;
+    constructor(cilindraje: number, color: string){
+        this.cilindraje = cilindraje;
+        this.color = color;
+    }
+ }
+ class moto2 {
+    cilindraje: number;
+    color: string;
+    constructor(cilindraje: number, color: string){
+        this.cilindraje = cilindraje;
+        this.color = color;
+    }
+ }
+
+ let instanciaMoto1 = new moto1(150,"rojo");
+ let instanciaMoto2 = new moto2(150,"rojo");
+ const a: moto1 = instanciaMoto2;
+ // a solo acepta clases de tipo "moto1" y le paso algo instanciado desde "moto2" , si lo acepta porque son exactamente iguales
+ // lo que importa es que cumpla con los tipos de datos y el nombre de variables. cumple las reglas
+
+
+
+
+// EN TYPESCRIPT TENER EN EN CUENTA
     // 1.- Que tipos valores entran
     // 2.- Que tipos valores salen
     // 3.- Que no cambien los tipos de valores
 
-// TIPADO SIEMPRE -------------------------------------------------------------
+    console.log("--------------------------------------------------------")
+
+
+// TIPADO SIEMPRE --------------------------------------------------------------------------------------------------------------------------------------------
 let myNumber: number = 1;
 myNumber = 2; // solo puedo actualizarl la variable con datos "number"
 let myString: string = "hola mundo";
@@ -41,7 +79,9 @@ console.log(ArrMyString2);
 let siNo: boolean = false;
 let siNo2: boolean[] = [false, true, false]; //areglo solo de booleanos
 
-// CALSES TCON TIPADO ----------------------------------------------------------------
+// CLASES CON TIPADO --------------------------------------------------------------------------------------------------------------------------------------
+
+console.log("------------------------------")
 class guitar{
 
     private marca: string;
@@ -65,11 +105,10 @@ class guitar{
         this.marca = marca;
     }
 }
-    const guitarJean = new guitar("fender", 2200.00, "rojo");
+    let guitarJean = new guitar("fender", 2200.00, "rojo");
     console.log(guitarJean)
-    guitarJean.setMarca("gibson")
-    console.log(guitarJean)
-    console.log(guitarJean.getMarca)
+    const marcaGuitarJean = guitarJean.getMarca();
+    console.log(marcaGuitarJean)
 
 
     class Guitar7cuerdas extends guitar {
@@ -81,16 +120,28 @@ class guitar{
         }
 
         getMarca(): string {
-            return super.getMarca() + " con 7 cuerdas";
+            return super.getMarca() + ": con 7 cuerdas (este getter usa el metodo de la clase padre guitar y le agrega : con 7 cuerdas";
             // POLIMORFISMO: poder usar metodos de las clases padres, y tambien se peude modificar el comprtamiento de estos
         }
     }
 
-    let guitar7cuerdas = new Guitar7cuerdas("sol", "gibson", 1000.00, "red");
-    console.log(guitar7cuerdas.getMarca());
-    console.log(guitar7cuerdas)
+    let guitarJean7Cuerdas = new Guitar7cuerdas("sol", "gibson", 1000.00, "red");
+    console.log(guitarJean7Cuerdas.getMarca());
+    console.log(guitarJean7Cuerdas);
 
-// INTERFACES TYPESCRIPT --------------------------------------------------------
+
+    const arregloDeGuitarras: guitar[] = [guitarJean7Cuerdas, guitarJean];
+    // tambien acepta "guitarJean7Cuerdas" porque es hijo de "guitar"
+    console.log(arregloDeGuitarras);
+
+    for(const guitarras of arregloDeGuitarras){
+        console.log(guitarras.getMarca());
+        //aqui se puede ver muy bien el polimorfismo
+    }
+
+    console.log("------------------------------")
+
+// INTERFACES TYPESCRIPT ----------------------------------------------------------------------------------------------------------------------------------------
  
 // OJO: TYPE, son parecidas a las interfaces?? usar mejor type?
 // https://www.youtube.com/watch?v=Idf0zh9f3qQ&ab_channel=ByteGrad
@@ -102,6 +153,7 @@ interface Person {
     name: string,
     age: number,
     lastName: string;
+    birth?: number; // esto es opcional, el contrato es flexible aqui
     breath: () => void;
 }
 
@@ -178,12 +230,62 @@ console.log(test2);
 
 // NO DUPLICAR INTERFACES NI NINGUNA ESTRUTURA PORFAVOR, LO ACEPTA? SI... PERO SERIA DUPLICAR CODIGO
 
-// AS CONST ------------------------------------------------------------------------------------------------
+// INTERFACES: UTILOTY TYPES: PARTIALS - REQUIRED -READ ONLY
+
+// Esto no se usa tanso segun gentlenman programing, pero lo pueden pedir en entrevistas
+// ejemplo de uso: tengo una interface(contrato) pero solo dispongo de una propiedad
+// opcion 1: colocar "?" en cada variable de la interface (asqueroso)
+// opcion 2:usar partial
+
+interface persona {
+    name: string,
+    lastName: string,
+    age: number,
+    weightLb: number
+}
+
+const miPersona : persona = {
+    name: "jean",
+    lastName: "veliz",
+    age: 30,
+    weightLb: 50
+}
+
+
+const miPersona2 : Partial<persona> = {
+    name: "jean",
+    lastName: "veliz"
+    // lo acepta no inporta que no cumpla el contrato 
+}
+const miPersona3 : Required<persona> = {
+    name: "jean",
+    lastName: "veliz",
+    age: 30,
+    weightLb: 50
+    // SI O SI PIDEO TODAS LAS PROPIEDADES
+}
+
+
+type interfacePesonaReadOnly = Readonly<persona>; // forma correcta. ordenar en variables para reutilizar
+
+const miPersona4 : interfacePesonaReadOnly = {
+    name: "jean",
+    lastName: "veliz",
+    age: 30,
+    weightLb: 50
+    // Solo se puede leer
+}
+// Esto da error:  miPersona4.name("jean no puedo modificarlo")
+
+
+//Existen mas (muchas) utility types pero estos son los mas relevantes
+
+// AS CONST ----------------------------------------------------------------------------------------------------------------------------------------------------
 
 // Sirve para retonar los valores exactos que se retornan, estos no se 
-// peuden modificar, con esto ya no se pondria que tipo de datos retornara el metodo
+// pueden modificar, con esto ya no se pondria que tipo de datos retornara el metodo
 
-// TIPOS GENERICOS ---------------------------------------------------------------------------------
+// TIPOS GENERICOS -----------------------------------------------------------------------------------------------------------------------------------------
 
 // que ocurre quiero  crear un metodo o componente (react) que funcione con una variedad de tipos en lugar de solo uno.
 
@@ -209,7 +311,11 @@ console.log(result2GetArray)
 
 
 
-// OJO CON OVERLOADING DE FUNCIONES----------------------------------------------------------
+
+// TypeScript mas complejo, basado en el curso de gentlenman programming
+
+
+// OJO CON OVERLOADING DE FUNCIONES-------------------------------------------------------------------------------------------------------------------------------
   
 // https://www.youtube.com/watch?v=fEwUoHZYIes&list=PL42UNLc8e48RRGwL5VA-TxCP4Kdt3-9-Q&index=2&ab_channel=GentlemanProgramming
 
@@ -239,7 +345,7 @@ function len(x: any): number{
 // LO OPTIMO ES TRABAJAR CON INTERFACE PADRE QUE NATURALEMENTE COMPARTEN PROPIEDADES
 
 
-// TYPESCRIPT NO ES TAN INTELIGENTE ------------------------------------------------------------------------
+// TYPESCRIPT NO ES TAN INTELIGENTE -------------------------------------------------------------------------------------------------------------------------------
 
 // https://www.youtube.com/watch?v=EjHq2jXEkpU&list=PL42UNLc8e48RRGwL5VA-TxCP4Kdt3-9-Q&index=3&ab_channel=GentlemanProgramming
 //// Estos son tema un poco mas avanzados, profundiza un poco en el funcionamiento de Ts
@@ -272,7 +378,7 @@ const metodo2 = (parametro: typeof arregloDeValores) =>{
     }
 }
 
-// RETURN TYPE -------------------------------------------------------------------------------------
+// RETURN TYPE --------------------------------------------------------------------------------------------------------------------------------------------------------
 
 // Estos son tema un poco mas avanzados
 // https://www.youtube.com/watch?v=OnNyP021TVw&list=PL42UNLc8e48RRGwL5VA-TxCP4Kdt3-9-Q&index=5&t=889s&ab_channel=GentlemanProgramming

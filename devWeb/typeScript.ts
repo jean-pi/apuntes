@@ -24,7 +24,7 @@
 // ESTE ES TODO EL TypeScript Que piden en una entrevista tecnica (en teoria)
 
 
-//LA FORMA EN LA QUE ESTA ESTRUCTURADO TYPESCRIPT ------------------------------------------------------------------------------------------------------------
+//LA FORMA (SHAPES) EN LA QUE ESTA ESTRUCTURADO TYPESCRIPT ------------------------------------------------------------------------------------------------------------
 
 console.log("--------------------------------------------------------")
  class moto1 {
@@ -49,7 +49,7 @@ console.log("--------------------------------------------------------")
  const a: moto1 = instanciaMoto2;
  // a solo acepta clases de tipo "moto1" y le paso algo instanciado desde "moto2" , si lo acepta porque son exactamente iguales
  // lo que importa es que cumpla con los tipos de datos y el nombre de variables. cumple las reglas
-
+// solo se fija en la forma que tiene, ya la forma es igual
 
 
 
@@ -140,6 +140,65 @@ class guitar{
     }
 
     console.log("------------------------------")
+
+
+// TYPES Y SU GRAN AYUDA -------------------------------------------------------------------------------------------------------------------------------------
+
+type dni = string;
+
+const tellMeMyId1 = (TheDni : dni) =>{
+    return TheDni;
+}
+const tellMeMyId2 = (TheDni : dni) =>{
+    return TheDni;
+}
+const tellMeMyId3 = (TheDni : dni) =>{
+    return TheDni;
+}
+// sin Type tendria que cambiar el tipo uno por uno xd7
+
+
+//union de interfaces con types
+
+interface contrato1 {
+    prop1: number,
+}
+interface contrato2 {
+    prop2: string,
+}
+
+type contratosAceptados = contrato1 | contrato2;
+
+const recopilacionDeContratos: contratosAceptados = {
+    prop1: 1227646378,
+    prop2: "162637281"
+    //  " | " puede ser uno o otro o los dos, con " && " serian los dos al mismo tiempo caso contrario saldria error
+}
+
+
+type contratosObligatorios = contrato1 & contrato2; 
+
+const recopilacionDeContratosObligatorios: contratosObligatorios = {
+    prop1: 1227646378,
+    prop2: "162637281"
+    // " && " serian los dos al mismo tiempo caso contrario saldria error
+}
+
+
+// type, para comprobar funciones, ejemplo: tengo un metodo que requiere una funcion como parametro, pero solo quiero que sea posible pasar cierto "tipo" de funcion
+
+
+type modeloFuncionSuma = (param1: number, param2: number) => number
+// solo se podra pasar una funcion que acepte dos parametro y regrese un numero
+
+const expectSuma = (sum: modeloFuncionSuma) =>{
+    return sum(1,2);
+}
+
+
+
+
+
 
 // INTERFACES TYPESCRIPT ----------------------------------------------------------------------------------------------------------------------------------------
  

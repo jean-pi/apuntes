@@ -289,17 +289,35 @@ const miPersona4 : interfacePesonaReadOnly = {
 
 // que ocurre quiero  crear un metodo o componente (react) que funcione con una variedad de tipos en lugar de solo uno.
 
+console.log("----------------------------------------------------------------------------")
 function getArray<T ,U>(arr: T[] , option: U) : T[] {
     return new Array<T>().concat(arr);
 }
 let resultGetArray = getArray(["a"],1);
-let result2GetArray = getArray<number , string>([1,2,4,1],"1");
-// puedo definir explicitamente el tipo de dato cuando llamo al metodo 
-// pero no hace falta type script lo detecta solo
+let result2GetArray = getArray<number , string>([1,2,4,1],"1"); 
 console.log(resultGetArray)
 console.log(result2GetArray)
 
+function metodoGenerico<T>(data: T): T{
+    return data;
+}
+const z = metodoGenerico<string>("lo detecta automaticamente como string");
+const w = metodoGenerico<interfacePesonaReadOnly>(miPersona4); // T tambien puede ser una interface, solo acepta objetos creados en base a la interface pasada
+console.log(z)
 
+
+// tambien con interfaces
+interface musicUserContrato<T>{
+    cancionMasEscuchada : T;
+} 
+const musicUser: musicUserContrato<String> = {
+    cancionMasEscuchada: "take it",
+} 
+
+
+
+
+console.log("----------------------------------------------------------------------------")
 
 
 

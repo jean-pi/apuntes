@@ -1,7 +1,6 @@
 
-// COSAS QUE CONSIDERO MUY ÚTILES REACT
 
-    //--destructuracion
+    //-----destructuracion
     let obj ={
         user:"jean",
         clave:"12345"
@@ -12,13 +11,7 @@
 
     imprimeUser(obj)
 
-    //--parametros por default 
-    function suma (a=0,b=0){
-        return a + b;
-    }
-    suma();
-
-    //--Spread operator 
+    //-----Spread operator y rest operator
     // los tres puntos ... lo que hace es crear como una copia de la variables
     const obj1 = {
         a : "a",
@@ -32,42 +25,19 @@
     const newArray = {...obj1 , ...obj2}
     let result =  {a : "a", b : "b", c : "c", d : "d", e : "e" }
 
-    //--operador ternario 
-    const auto = {
-        marca : "tesla"
-    }
-    let modelo = auto.marca ? coche.model : `X`
-    `esto resume usar if else`
+    function sumar(a,b,...c){} //rest operatos me permite aceptar valores que desconozco su cantidad
 
-    `en react`
-    `function listaTareas({tareas}){
-        return (
-            <React.Fragmanet>
-                {tareas.length ? (
-                    <ul>
-                        {tareas.map...}
-                    <ul/>
-                ) : (
-                    <div>no hay tareas<div/>
-                )}
-            </React.Fragment>
-        )
-    }`
 
-    //-- Nullish coalescing operator (??)
-    function suma(a,b){
-        a = a ?? 0;
-        b = b ?? 0;
-        return a + b;
-    }
-    suma();
-
+    //-----Nullish coalescing operator (??)
+    `sustituto de "or ||"          ?? evalua si el valor es nulo o undefined`
+    `aveces hay problemas porque || evalua si es verdadero o falso y un 0 da como falso`
     `in react`
     function avatar({user}){
         return <img src = {user.avatarImg ?? `https://placeholderAvatarGenerico.ftklp/12`}/>
     }
 
-    //--Optional chaining (?.)
+
+    //-----Optional chaining (?)
     `hacer varias comprovaciones`
 
     `antes`
@@ -75,6 +45,64 @@
 
     `now`
     const zipcode = user?.location?.city?.zipCode;
+
+    
+    //-----funciones declaradas vs expresadas
+
+    function calcularVelocidad (distancia=undefined, tiempo=undefined){} // las funciones declaradas se pueden inicializar y
+    //mandar los datos antes de la misma clase , esto pasa porque javascript primero lee VARIABLES Y FUNCIONES DECLARADAS y despues lo demas 
+
+    let calcularVelocidad = function (distancia=undefined, tiempo=undefined){} //no se pueden llamar antes de declararlas
+
+
+    //-----Async - Await diferencias
+
+        // En términos de sintaxis, el método .then() posse una sintaxis con más sentido cuando se usa JavaScript de manera funcional,
+        // mientras que el flujo de declaraciones con async/await tiene sentido cuando se usa en métodos de clase.
+        // async/await surgió como una opción de "lectura más fácil" que .then(), pero es importante tener en cuenta que estos métodos 
+        // no son lógicamente equivalentes: mientras que async/await realiza el procesamiento secuencialmente, las promesas con .then() 
+        // se procesan en paralelo , lo que hace que este método sea más rápido. async/await simplifica la 
+        // escritura y la interpretación del código, pero no es tan flexible y solo funciona con una Promesa a la vez.
+        // Pero, ¿y si necesitamos manejar varias Promesas, pero no queremos hacerlo en paralelo? Un ejemplo clásico 
+        // de esta situación es acceder a una base de datos con miles de registros. En este caso, no queremos que todas 
+        // las solicitudes se realicen en paralelo, ya que el exceso de solicitudes simultáneas puede causar problemas 
+        // de rendimiento e incluso la caída del servicio
+
+    
+    //-----Cosas que debo investigar
+
+    //Sets
+    //Maps: conjunto de datos qeu tienen una relacion funcionan algo parecido a los getter y setter de las clases, coleccion de datos un diccionario
+    //WeakSets & WeakMaps: nuevos tipos de datos EM6, como hermanos de set y map creo que son funcinales para programacion reactiva.
+    //Iterables & Iterators:
+    //Generators:
+    //Proxies:
+    //call,apply,blind: me permite escoger el contexto "this" , lo podria hacer dinamico
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -99,7 +127,7 @@
 
 
 
-//                                         _____________   [ FUNCIONES DECLARADAS ] ________________
+//                                         _____________   [ FUNCIONES EXPRESADA ] ________________
 
 // LOPAR SE GUARDAN EN VARIABLES 
 
@@ -177,15 +205,12 @@
 
 //OPERADOR SPREAD
 
+    //hace una copia de la variable o arreglo, el arreglo original queda intacto
     // let arr1 =[1,2,3,4,5]
     // let arr2 =[6,7,8,9,0]
     // console.info(arr1)
     // console.info(arr2)
     // console.info(...arr1,...arr2) //junta los dos array
-
-
-
-
 
 
 //28.-objeto Math-----------------------------------------------------------------------------------------------------------------------------
@@ -231,7 +256,7 @@
 
 //32.-funciones anonimas autoejecutables--------------------------------------------------------------------------------------------------
 
-//encapsula el codigo , un ejemplo se puedes poner dos variables de ingual nombre y no causa conflicto ya que una esta encapsulada 
+//encapsula el codigo , un ejemplo se puedes poner dos variables de igual nombre y no causa conflicto ya que una esta encapsulada 
 //y estan en contextos diferentes
 // se usaban antes
 // (function (d,w,c) {
@@ -428,7 +453,7 @@
         // 55. Proxies-------------------------------------------------------------------------------------------------------------------
             // ver clase
         // 56. Propiedades Dinamicas de los Objetos--------------------------------------------------------------------------------------
-            // ver clase
+            // irrelevante
         // 57. This----------------------------------------------------------------------------------------------------------------------
                 
         // esta palabra hacer referencia al objeto en el que estamnos 

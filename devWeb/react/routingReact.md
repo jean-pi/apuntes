@@ -14,7 +14,7 @@
 
 ## Administrar rutas
     import {Routes, Route, Outlet} from "react-router-dom";
-    //Outlet idica donde se renderizan los hijos de las rutas, 
+    //Outlet indica donde se renderizan los hijos de las rutas, 
     //es como un hueco donde puedo mostrar info dinamica,manejada por tutas
 
 
@@ -131,6 +131,7 @@
     <Navigate to="/landing"/>
 
     UseLocation()? es una tonteria pero mejora mucho el rendimiento? enviar info y utilizarla en otra ruta, mejora el tiempo de carga.
+    consiste en llevar informacion de una ruta para ya no hacer peticiones http en la siguiente
 
 #### UseLocation() para atrapar datos de la url y llevarla a la siguiente
     import { Navigate, useLocation} from "react-router-dom";

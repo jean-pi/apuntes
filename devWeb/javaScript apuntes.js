@@ -71,7 +71,7 @@
     
     //-----Cosas que debo investigar
 
-    //Sets
+    //Sets:
     //Maps: conjunto de datos qeu tienen una relacion funcionan algo parecido a los getter y setter de las clases, coleccion de datos un diccionario
     //WeakSets & WeakMaps: nuevos tipos de datos EM6, como hermanos de set y map creo que son funcinales para programacion reactiva.
     //Iterables & Iterators:
@@ -80,9 +80,46 @@
     //call,apply,blind: me permite escoger el contexto "this" , lo podria hacer dinamico
 
 
+    //-----Metodos para manejar arreglos.
+
+    //para modificar
+        .push .pop .shift .unshift //para agregar y eliminar elementos. Ejemplos para implementar una pila y una cola.
+        .copyWithin //para copiar y pegar un rango de elementos.
+        .fill //para rellenar elementos con el mismo valor.
+        .reverse //para invertirlo (darle la vuelta).
+        .sort //para ordenarlo. Ejemplo para ordenar una tabla.
+        .splice //para eliminar elementos.
+
+    //Métodos para iterar por un Array
+        .keys //para obtener un iterador de Array para iterar por los índices.
+        .values //para obtener un iterador de Array para iterar por los valores.
+        .entries //para obtener un iterador de Array para iterar por parejas índice-valor.
+        .forEach //para iterar por un Array con una función callback.
+
+    //Métodos para crear nuevos Array
+        .concat //para concatenar dos Array en un nuevo Array.
+        .map //para iterar por un Array ejecutando un callback y devolver un nuevo Array.
+        .slice //para recortar un Array y devolverlo en un nuevo Array. Ejemplo de uso en algoritmo de búsqueda binaria.
+        .filter //para iterar por un Array ejecutando un callback que filtra los elementos, devolviéndolos en un nuevo Array. Ejemplo para filtrar elementos del DOM.
+
+    //Métodos para buscar en un Array
+        .every //comprueba que todos los elementos de un Array cumplen un callback.
+        .some //comprueba que algún elemento de un Array cumple un callback.
+        .find //encuentra un valor en un Array que cumpla un callback. Cómo obtener el valor seleccionado en elementos input tipo radio.
+        .findIndex //encuentra el primer índice de un Array que cumpla un callback.
+        .includes //comprueba si un Array tiene un determinado valor.
+        .indexOf //busca el primer índice en un Array que tenga un determinado valor.
+        .lastIndexOf //busca el último índice en un Array que tenga un determinado valor.
+
+    //Métodos que devuelven un valor transformado desde un Array
+        .join //transforma un Array devolviendo un String concatenando sus elementos con el String del argumento.
+        .reduce //transforma un Array en un valor final simple mediante un callback. Exponenciación rápida con el método reduce().
+        .reduceRight //transforma un Array en un valor final simple mediante un callback, iterando desde el final del Array hacia el principio.
+        .toString //transforma un Array en un String concatenando sus elementos con una coma.
+        .toLocaleString //transforma un Array en un String concatenando sus elementos en formato local con una coma.
 
 
-
+    //-----DOM: ojo con las multiples formas de acceder a documen html y sus elementos
 
 
 

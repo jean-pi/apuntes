@@ -18,8 +18,7 @@ Todos los demás navegadores -webkit-
 APRENDER
 2.funciones css: calc(), min() max(), clamp(),ulr()
 4. > que es esto en css?    >*::placeholder {}    >*[required]:invalid
-5.animaciones y transiciones css
-6.object fit
+
 
 para paginas que se van a imprimir cm,mm,in
 em,rem,ex para tamaño de fuentes, MEJOR ES EL REM

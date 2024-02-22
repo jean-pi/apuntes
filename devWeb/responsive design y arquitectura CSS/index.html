@@ -15,7 +15,6 @@
     <!--indice------------------------------------------------------------->
     <article>
         <ul>
-            <p>ejempos de paginas responsivas <a target="_blank" href="https://mediaqueri.es/">mediaqueri.es</a></p>
             <li class="nivel-1"><h3>1.<a href="#1"> Responsive design</a></h3>
                 <ul>
                     <li>1.1.<a href="#1.1">Contenedores flexibles</a></li>
@@ -114,7 +113,7 @@
     img,audio,video,iframe,canvas,svg,picture{
         max-width: 100%;
         height: auto;
-        // con estos todos se vuelven flexibles
+        // los elementos multimedias no deben ser mas grandes que los elementos que los contienen
     }
         </code></pre>
         
@@ -240,6 +239,7 @@
         img,audio,video,iframe,canvas,svg,picture{
             max-width: 100%;
             height: auto;
+            block-size: auto;
             // con estos todos se vuelven flexibles
         }
         .googleMaps_aspectRatio_cuadrado{

@@ -20,3 +20,9 @@ SIGUINETE PASOS
 //inmutabilidad
 //Estados con redux o useReduce()nativo de react?
 //axios
+
+
+//guias
+
+// crear formularios
+https://web.dev/articles/sign-in-form-best-practices?hl=es#keyboard-obstruction

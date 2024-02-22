@@ -96,21 +96,7 @@ img, audio, video, iframe, canvas, svg, picture {
   height: auto;
 }
 
-@media screen and (prefers-color-scheme: dark) {
-  html {
-    background: rgb(0, 0, 0);
-    color: rgb(255, 255, 255);
-  }
-  html .table tr th {
-    border: 1px solid rgb(255, 255, 255);
-  }
-  html .table tr td {
-    border: 1px solid rgb(255, 255, 255);
-  }
-  html code {
-    color: rgb(0, 0, 0);
-  }
-}
+/*  */
 @media print {
   @page {
     size: A6;

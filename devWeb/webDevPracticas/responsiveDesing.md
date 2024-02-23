@@ -149,4 +149,67 @@
 
 ## Temas: dark light
 
-    <meta name="theme-color" content="#00D494">
+<https://web.dev/learn/design/theming?continue=https%3A%2F%2Fweb.dev%2Flearn%2Fdesign&hl=es-419#article-https://web.dev/learn/design/theming&hl=es-419>
+
+## interaccion
+
+  // activar un hover cuando se selecciona algo con el teclado 
+  button .extra {
+    visibility: visible;
+  }
+  @media (hover: hover) {
+    button .extra {
+      visibility: hidden;
+    }
+    button:is(:hover, :focus) .extra {
+      visibility: visible;
+    }
+  }
+
+
+## Menus, links 
+
+  //Lo optimo seria evitar los botones de hamburguesa ya que ocipan dos cliks para llegar a un sitio
+  // y si se usan este debe contener para que sirve no solo un icono
+  // "menú" , "novedades", etc..
+
+## Carruseles
+
+  //Para pantallas angostas, muestra elementos en una fila con flexbox. La fila de elementos se extenderá 
+  //más allá del borde de la pantalla. Usa overflow-x: auto para permitir el deslizamiento horizontal.
+
+
+  @media (max-width: 50em) {
+    .cards {
+      display: flex;
+      flex-direction: row;
+      overflow-x: auto;
+      scroll-snap-type: inline mandatory; //  scroll-snap garantizan que los elementos se puedan deslizar de una manera que se sienta fluida.
+      scroll-behavior: smooth;
+    }
+    .cards .card {
+      flex-shrink: 0;
+      flex-basis: 15em;
+      scroll-snap-align: start;
+    }
+  }
+
+  loading="lazy" // no carga la imagen hasta que el el carrusel se dazplace 
+
+
+  // Cuando exista espacio suficiente para mostrar el contenido se debe cambia a una grid
+
+  @media (min-width: 50em) {
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
+    }
+  } 
+
+
+## Tablas desbordadas
+
+
+## Tipos de pantalla
+
+  // detectar las secciones de la pantalla para adaptar el contenido a dispositivos con dos pantallas o felxibles

@@ -10,6 +10,9 @@ CLS esos espacios que hacen que la pagina se mueva al cagar y son molestos
 https://web.dev/optimize-cls/?utm_source=lighthouse&utm_medium=lr#images-without-dimensions
 
 
+Guia formularios
+https://web.dev/articles/sign-in-form-best-practices?hl=es#keyboard-obstruction
+
 
 1. los elementos no se ubican con margin o padding, estos deben ubicarse con un layout padre que los colque donde deben ir.
 se podria pasar por props con margin o padding pero esto no seria fluido y habria que colocar el responsive con @medias

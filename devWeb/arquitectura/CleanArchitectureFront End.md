@@ -5,7 +5,7 @@
 
     construir aplicaciones escalables y faciles de mantener
     ---
-    Arquitectura, forma de estruturar el proeycto para cumplir un objetivo
+    Arquitectura, forma de estruturar el proyecto para cumplir un objetivo
     ---
     objetivo: Separation of concerns, dividir el proyecto en capas, las mas posibles, modificar parte del proyecto y que lo demas funcione perfectamente
     ---
@@ -44,6 +44,8 @@
 
 ---
 
+# Codigo atomico
+    Dividir el codigo en las pertes mas pequeñas posibles será falcil de probar. Esto también trae más beneficios, como la reutilización del código, un mejor mantenimiento e incluso un mejor rendimiento; a medida que el código se vuelve más pequeño y mejor organizado y dependiendo del lenguaje / marco que usemos, podríamos terminar con menos ciclos de procesamiento.
 
 # Clean architecture para frontend
 
@@ -81,7 +83,7 @@
 
     Modularizacion es una formade dividir el codigo de cierta forma que cada modulo sea independiente entre si, esto simplifica la logica, ayuda al lazy loading (carga perezosa) porque solo se cargan los modulos que se necesiten de apoquito, este concepto se aplica bastente en Angular y es facil de aplicar a React.
 
-    Las carpetas marcadas antes "🟣: reutilizables" se pueden volver a crear dentro de ellos mismos, un poco complicado de entender asi que Ejmplo:
+    Las carpetas marcadas antes "🟣: reutilizables" se pueden volver a crear dentro de pages(la idea es colocar solo lo que voy a utilizar en esa vista), un poco complicado de entender asi que Ejmplo:
 
 >Tengo dentro de carpeta pages(es reutilizable) , vista "login" "register" "home" y dentro de estas vistas puedo tener de vuelta todas las carpetas marcadas como reutilizables, puedo volver a tener adapters, services, componentes models, etc...
 

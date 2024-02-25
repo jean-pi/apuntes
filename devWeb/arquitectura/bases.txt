@@ -2,7 +2,7 @@
 EMPRESA TIPTI usa:
 -vue
 -turbo build: es turbo pack, se usa en next13, echo en rust , es mas mucho mas rapido que vite
--axios: permitia hacer peticiones ajax sin instalar jquery, ahora se utiliza porque da ventajas en entornos mas complejos es mas completa, actualmente js de forma nativa permite hacer peticiones sin instalar nada esto se conoce con fetch
+-axios: permitia hacer peticiones ajax, ahora se utiliza porque da ventajas en entornos mas complejos es mas completa, se puede usar fecth pero axios es para mas complejidad
 -vite: proyectos rapidos y simples / usarlo con servidor de desarrollo / entorno de desarrollo / herremienta de construccion. 
     Se compara con Gulp, WebPack
     Es rapido, se evita el cuello de botella, echo en GO

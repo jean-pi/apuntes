@@ -65,7 +65,7 @@
 >https://www.youtube.com/watch?v=j2-X0Pck9jk&ab_channel=10MinutosProgramando
 
 ## useRef()
->Hacer referencia a un nodo html, para manejarlo a mano, tener la etiqueta en una varoable para trabajar con ellañ
+>Hacer referencia a un nodo html, para manejarlo a mano, tener la etiqueta en una variable para trabajar con ella
 
 >y si tengo 500 botones , creo 500 referencias? NO, tener cuidado con las referencias
 
@@ -83,9 +83,9 @@
 
 >Es una tonteria? he escuchado a personas que no lo deberia utilizar
 
->PROBLEMATICA 1: los datos se guardan en mnemoria (ram) y al tener bastantes datos se satura
+>PROBLEMATICA 1: los datos se guardan en memoria (ram) y al tener bastantes datos se satura
 
->PROBLEMATICA 2: no simepre devuelve bien el cache, no simpre devuelve un memo? no es fiable entonces
+>PROBLEMATICA 2: no simpre devuelve bien el cache, no simpre devuelve un memo? no es fiable entonces
 
 >CUANDO USAR: Calcular que se usa bastante, complicado pero que la data no cambie bastante.
 

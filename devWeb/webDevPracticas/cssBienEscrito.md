@@ -13,6 +13,9 @@ https://web.dev/optimize-cls/?utm_source=lighthouse&utm_medium=lr#images-without
 Guia formularios
 https://web.dev/articles/sign-in-form-best-practices?hl=es#keyboard-obstruction
 
+?????
+https://web.dev/blog/inp-cwv-march-12?utm_source=web.dev&utm_medium=banner&utm_campaign=inp-cwv&hl=es-419
+
 
 1. los elementos no se ubican con margin o padding, estos deben ubicarse con un layout padre que los colque donde deben ir.
 se podria pasar por props con margin o padding pero esto no seria fluido y habria que colocar el responsive con @medias
@@ -25,4 +28,4 @@ se podria pasar por props con margin o padding pero esto no seria fluido y habri
 
 5. El css esta ligado a los componenetes, con la ui ya echa puedo determinar que componentes necesito y que funcionalidad van a tener
 
-6. Es preferible que los medias se coloquen segun el contenido de el box o seccion, de esta forma la UI no se adapta segun el tamaño de la pantalla si no segun el contenido, el responsive no debe ser una vercion pequeña o grande de la UI 
+6. Es preferible que los medias se coloquen segun el contenido de el box o section, de esta forma la UI no se adapta segun el tamaño de la pantalla si no segun el contenido, el responsive no debe ser una vercion pequeña o grande de la UI 

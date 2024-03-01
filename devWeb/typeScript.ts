@@ -18,7 +18,21 @@
 
 
 
+// COSAS ESTRAÑAS QUE PASAN EN TYPESCRIPT
 
+    // Propiedades opcionales
+    interface water{
+        name: string,
+        cantidad?: number // propiedad opcionañ
+    }
+
+    const obtWater: water = {
+        name: "water 1", // funciona
+    }
+
+
+    // https://www.youtube.com/watch?v=PB_c_z2r00g&ab_channel=hdeleon.net
+    // https://www.youtube.com/watch?v=RkScZ1mxIFI&ab_channel=hdeleon.net
 
 
 // ESTE ES TODO EL TypeScript Que piden en una entrevista tecnica (en teoria)

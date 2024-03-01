@@ -212,4 +212,4 @@
 
 ## Tipos de pantalla
 
-  // detectar las secciones de la pantalla para adaptar el contenido a dispositivos con dos pantallas o felxibles
+  // detectar las secciones de la pantalla para adaptar el contenido a dispositivos con dos pantallas o felxibles 

@@ -4,6 +4,7 @@
 
     Son un conjunto de practicas    
 
+    Giran en torno a las funciones
 
     Utilizar las funciones de la mejor manera posible para crear un software limpio y mantenible
 
@@ -19,7 +20,7 @@
     //CUANDO ESCRIBA LOS getters() de una clase SIEMPRE devolver una copia: return [...proiedadAdevolver]
     //uso la inmutabilidad para escoger una unica forma de modificar mis propiedades
 
-##### Metodos mutables e inmutables de los arreglos[]
+#### Metodos mutables e inmutables de los arreglos[]
 
     //El objeto Array[] define algunas operaciones MUTABLES, es decir, modifican el arreglo original al operar sobre el: 
     -push()//agrega al final del arreglo 
@@ -69,10 +70,20 @@
     const newCiudad = {...ciudades} // copio ciudades y modifico una copia no la original
     const newCiudad = structuredClone(ciudades) // nuevo metodo de js, con {...ciudades} puede haber problemas con objetos complejos, con esta nueva forma no existen esos problemas
 
-#### Funcion pura
+## Funcion pura
 
 1. Funcion que si recive los mismos parametros siempre va a regresar el mismo resultado, hoy, mañana y siempre.
 2. Si la funcion hace cambios fuera de si mismas no es pura
 3. Una funcion pura usa el concepto de inmutabilidad para coger data externa,copiarla y luego regresar la info, resultado no hizo cambios de infomacion ya establecida, creo copias de ella y regreso una infomacion nueva
 
 >Se podria decir que la inmutabilidad usa mas espacio en memoria ya que instacia una nueva entidad
+
+## Funcion de primer orden
+
+    Funcion que es tratada como una variable
+    se guarda en una variable
+    se peude pasar como parametro a otras funciones
+
+## Funiones de segundo orden
+
+    Funciones que reciben funciones como parametros (reciben funciones de primer orden como parametros)

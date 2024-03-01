@@ -31,6 +31,7 @@
 ## Iniciar un proyecto react
 > instalar react, descargar *nodeJS* y con esto de descarga *npm* :
 
+>npm create vite@latest [name app]
 >En la consola de node: npx create-react-app myplication
 
 > Luego entar a la carpeta donde se creo y darle:

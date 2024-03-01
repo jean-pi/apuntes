@@ -11,5 +11,18 @@ EMPRESA TIPTI usa:
 
 
 
+// Lo mejor es usar un proveedor de auth, crear un sistema de authenticacion es complejo y se nesecita seguridad, 
+// incluso puede haber problemas legales
 
-OJO CON TURBO PACK
+
+
+// Aveces no tiene sentido usar typescript en toda la app, ya que typescript unsa versionado
+// y no sabemos como estara typscript en el futuro, a compraracion de usar js nativo que siempre lo
+// entendera el navegador
+
+// en componentes no se lo usaria mucho ya que no se aprovecharia el tipado de datos
+// la idea es bajar la carga logica de los componentes 
+// tener carpetas services por ejemplo, escrita en ts y hacer peticiones qui
+// algo feo seria hacer peticiones en un useEffect()
+
+// desacoplar la logica de negocios del frameword ya que si quiero cambiar de react a Vue por ejemplo ya tengo mi logica lista

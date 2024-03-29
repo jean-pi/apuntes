@@ -362,6 +362,7 @@ const miPersona4 : interfacePesonaReadOnly = {
 
 // que ocurre quiero  crear un metodo o componente (react) que funcione con una variedad de tipos en lugar de solo uno.
 
+// T va a detectar el tipo que se le ingresa "string", "number", etc y solo puedo devolver el mismo tipo
 console.log("----------------------------------------------------------------------------")
 function getArray<T ,U>(arr: T[] , option: U) : T[] {
     return new Array<T>().concat(arr);

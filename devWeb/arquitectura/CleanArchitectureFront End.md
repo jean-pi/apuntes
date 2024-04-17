@@ -69,8 +69,8 @@
 |🟣Componets   | componetes         |
 |🟪Contexts   |  api nativa context de react        |
 |🟣Hooks    |   hooks, custon hooks        |
-|🟣Interceptors   | Se adapta lo que se recibimos de bases de datos, apis y lo que enviamos a una base de datos a donde sea         |
-|🟣Models   |  mas para TypeScript, interfaces que tengan las estruturas, modelos , contratos que se deben de seguir estrcitamente |
+|🟣Interceptors   | axios se interceta una peticion y se la modifica? |
+|🟣Models   |  mas para TypeScript, interfaces que tengan las estruturas, modelos , contratos que se deben de seguir estrcitamente, logica de negocio |
 |🟪Pages   |  Vistas   |
 |🟪Redux   |   Estados manejados en Redux  |
 |🟣Services   | Lamadas externas, punto donde se llama a la api  |

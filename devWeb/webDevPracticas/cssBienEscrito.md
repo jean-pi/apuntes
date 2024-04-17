@@ -16,6 +16,9 @@ https://web.dev/articles/sign-in-form-best-practices?hl=es#keyboard-obstruction
 ?????
 https://web.dev/blog/inp-cwv-march-12?utm_source=web.dev&utm_medium=banner&utm_campaign=inp-cwv&hl=es-419
 
+// crear formularios
+https://web.dev/articles/sign-in-form-best-practices?hl=es#keyboard-obstruction
+
 
 1. los elementos no se ubican con margin o padding, estos deben ubicarse con un layout padre que los colque donde deben ir.
 se podria pasar por props con margin o padding pero esto no seria fluido y habria que colocar el responsive con @medias

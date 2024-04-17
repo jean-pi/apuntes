@@ -1,10 +1,5 @@
 BASICOS A ENTENDER
-//routing ######
 //imports dinamicos, slacy loadign, suspense y espliting ya vine echo en nextjs?
-//hooks personalizados y otros hooks como useContext() vs redux, useMemo(), context() #####
-//accesibilidad
-//crear cookies #####
-//administrar chache #####
 
 
 
@@ -17,12 +12,4 @@ SIGUINETE PASOS
 //ARQUITECTURAS: Arquitectura orientada a eventos
 //ARQUITECTURAS: Arquitectura orientada a observables Rxjs (compartir eventos con obserbables, generar eventos y que reaccionen otros componentes)
 //debo apprender a filtrar, es muy pedido en prueba tecnica
-//inmutabilidad
-//Estados con redux o useReduce()nativo de react?
-//axios
-
-
-//guias
-
-// crear formularios
-https://web.dev/articles/sign-in-form-best-practices?hl=es#keyboard-obstruction
+//inmutabilidad: programacion funcional

@@ -103,7 +103,7 @@
     2. No mostrar texto hasta que cargue la fuentes
     body {
         font-family: Roboto, sans-serif;
-        font-display: fallback;
+          font-display: fallback;
     }
 
 ## Multimedia

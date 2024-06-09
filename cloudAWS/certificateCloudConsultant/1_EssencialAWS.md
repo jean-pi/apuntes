@@ -1,4 +1,4 @@
-# ☁️AWS
+gi# ☁️AWS
 
 ## VENTAJAS DE LA NUBE
 > cambio de gasto fijo a gasta variable: Esta escalada no se necesita hacer manualmente, se puede programar para escalar dinámicamente.

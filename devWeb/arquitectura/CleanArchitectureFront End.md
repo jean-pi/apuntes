@@ -1,6 +1,7 @@
 # Clean Architecture en Front End
 
 
+## Separation of concerns
 ## Que es?
 
     construir aplicaciones escalables y faciles de mantener
@@ -53,10 +54,10 @@
 
 |        |        |
 |--------|--------|
-|    Servicios Externos     |    Llamadas a un endpoint   |
-|    Adaptadores        |    Adaptador que crear un objeto js ,  si lo que retorna la Api cambia, porque aveces no se tiene control sobre las apis que se usan, entonces solo se modifica el adaptador y la nueva info que retorna la api se adaptara en toda la App, ya que se supone que toda la app usa la info procesada del objeto que crea el adaptador |
-|    Componentes        |    Los componentes trabajaran sobre los modelos y states los componentes tienen la logica de negocio |
-|    Modelos/ State      |    interfaces, clases, cosas que representan entidades en la app, el state es donde se guardaran estas entidades en diferentes momentos y cliclos de vida ejmplo luego de un login se guarda la info del usuario en el state, porque esta info se usara por toda la aplicacion   |
+|    CAPA EXTERNA (Servicios Externos en frontend)     |   Recursos externos que como no son de nosotros con el tiempo pueden cambiar por ejemplo una Llamadas a un endpoint - llamada api . Debe ser intercambiable, algo que se pueda sacar poner , poner otros|
+|    ADAPTADORES (en frontedn Adaptadores)        |    Adaptador que crear un objeto js ,  si lo que retorna la Api cambia, porque aveces no se tiene control sobre las apis que se usan, entonces solo se modifica el adaptador y la nueva info que retorna la api se adaptara en toda la App, ya que se supone que toda la app usa la info procesada y estandarizada del adaptador, (mi abse de datos me regresa, id, userName y en mi adapter lo cambio a idUser, displayName y estas nuevas variables son las que usare en mi app) |
+|    CASOS DE USO (en fronted Componentes)        |   Logica de aplicacion , una funcion importante de la logia de aplicacion es que acerca las entidades a la logica de negocios(usuario(entidad) debe ser mayor de 18 años(logica de negocios) y estos dos se conectan con la logia de application(logica que depende de la tegnologia) Los componentes(en react) trabajaran sobre los modelos y states los componentes usan la logia de nogecios del dominio |
+|    DOMINIO (Modelos/ State en frontend)       |    interfaces, clases, logica de negocios (todo requerimientos que no dependen de la tegnologia , puede ser hasta un mensaje de error, otra cosa es como muestro este error, con diferentes colores o estilos, pequeño mensaje, pop up etc es logica de aplicacion), cosas que representan entidades en la app, el state es donde se guardaran estas entidades en diferentes momentos y cliclos de vida ejEmplo luego de un login se guarda la info del usuario en el state, porque esta info se usara por toda la aplicacion   |
 
 >Cliclo de trabajo con clean architecture aplicada a frontend: 1. llamada a una api que retorna info de un user.  2. Adaptamos la info en un objeto Js. 3. Es ta info representara una entidad modelo. 4. usamos los modelos para crear logica de negocio en componentes, usamos estos modelos/entidades predefinidos y actualizamos estados y ciclos de vida.
 

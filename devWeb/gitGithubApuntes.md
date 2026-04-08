@@ -8,11 +8,6 @@ $ git config --global -e
 $ git config --global core.autocrlf true     // elimina los saltos de linea que coloca windows [en mac es "input" y en vez de "true"]
 $ git config -h  // opciones configuracion
 
---FLUJO DE TRABAJO
- 1-stage: $ git add {} // guarda solo los cambios que se han echo esta accion no 
- se sube al repositorio
- 2-commit: $ git commit {} // una vez que este en stage todo los cambios que quiero subir se hace un commit
- 3-server: $git push // subir a un server el commit
 
 
 $ ls //todas las carpetas y archivos
@@ -43,6 +38,7 @@ $ git restored --staged {} // se quita del stage
 
 //COMMIT
 $ git commit -m "commit inicial"  //guardar una lista de cambios (commit:comprometer)
+// -m : add message
 // cuanto se haga un commit no aparecera ningun archivo con $ git status ya que no ningun cambio en el stage($ git add {})
 $ git commit  //se abrira el editor de texto ahi se peude escribir una descripcion en la primera linea
 $ git log --oneline o $ git log // muestra historial de commits y info (se lase con que)
@@ -50,11 +46,12 @@ $ git log --oneline o $ git log // muestra historial de commits y info (se lase 
 
 //PUSH
 $ git remote add origin htpps:repositoriogithub
-$ git push -u origin main // la primera vez: -u se crea una rama , origin donde sera creada, master nombre de la ramma
+$ git push -u origin main // la primera vez: -u se crea una rama , master nombre de la ramma
 $ git push origin main // origin--nombre del servidor  main--rama en la que estoy  ESTO ES PARA SUBIR AL SERVIDOR
 $ git remote -v //muestra la direccion del servidor
-$ git remote //muestra el name del servidor asociado // $ 	git remote rename "newName"
-// esto es para crear la rama en github
+$ git remote //muestra el name del servidor asociado // 
+$ git remote remove "name servidor" // eliminate url assosiate
+$ git remote rename "newName" // esto es para crear la rama en github
 //LUEGO PIDE USUARIO Y TOKEN DE ACCESO : el token esta en github.com   , settings/developer settings 
 
 

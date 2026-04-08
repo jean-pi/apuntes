@@ -23,7 +23,7 @@
     // Propiedades opcionales
     interface water{
         name: string,
-        cantidad?: number // propiedad opcionañ
+        cantidad?: number // propiedad opcional
     }
 
     const obtWater: water = {
@@ -60,7 +60,7 @@ console.log("--------------------------------------------------------")
 
  let instanciaMoto1 = new moto1(150,"rojo");
  let instanciaMoto2 = new moto2(150,"rojo");
- const a: moto1 = instanciaMoto2;
+ const motocompatible: moto1 = instanciaMoto2;
  // a solo acepta clases de tipo "moto1" y le paso algo instanciado desde "moto2" , si lo acepta porque son exactamente iguales
  // lo que importa es que cumpla con los tipos de datos y el nombre de variables. cumple las reglas
 // solo se fija en la forma que tiene, ya la forma es igual
@@ -169,7 +169,7 @@ const tellMeMyId2 = (TheDni : dni) =>{
 const tellMeMyId3 = (TheDni : dni) =>{
     return TheDni;
 }
-// sin Type tendria que cambiar el tipo uno por uno xd7
+// sin Type tendria que cambiar el tipo uno por uno
 
 
 //union de interfaces con types
@@ -199,7 +199,8 @@ const recopilacionDeContratosObligatorios: contratosObligatorios = {
 }
 
 
-// type, para comprobar funciones, ejemplo: tengo un metodo que requiere una funcion como parametro, pero solo quiero que sea posible pasar cierto "tipo" de funcion
+// type, para comprobar funciones, ejemplo: tengo un metodo que requiere una funcion como parametro, 
+// pero solo quiero que sea posible pasar cierto "tipo" de funcion
 
 
 type modeloFuncionSuma = (param1: number, param2: number) => number

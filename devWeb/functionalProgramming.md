@@ -12,7 +12,7 @@
 ## Inmutabilidad
 
     Los datos de una entidad no cambian, si quiero trabajar con esos datos debo de hacer una copia(clon)
-    Los datos iniciales quedanintectos, los estados de datos no cambian
+    Los datos iniciales quedan intactos, los estados de datos no cambian
 
     //EJEMPLO: cuando tienes una clase, puede tener tus propiedades #privadas y solo se podran modificar con un setter()
     //pero si existe un getter() que me de una informacion y luego modifico lo que me regresa el getter() igual es una forma de modificar
@@ -47,7 +47,7 @@
     -hacer un splice() inmutable => const newUsuarios = [...usuarios.slice(0,1), newUser, ...usuarios.slice(3)]
 
 
-    //Metodos de arreglo utiles (los que regresan el arreglo modificado, ya son i mutables por defecto)
+    //Metodos de arreglo utiles (los que regresan el arreglo modificado, ya son inmutables por defecto)
     -concat() combina uno o más arreglos y regresa un arreglo combinado. Es un método inmutable.
     -join() junta todos los elementos de un arreglo usando un separador y regresa una cadena. El separador por defecto usado para juntar es coma(,)
     -filter() El método filtró crea un nuevo arreglo con todos los elementos que satisfagan la condición mencionada en la función.

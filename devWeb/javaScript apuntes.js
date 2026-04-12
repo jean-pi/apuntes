@@ -1,4 +1,130 @@
 
+//ECMAScript 2025 NUEVAS IMPLEMENTACIONES
+
+
+// EXPORTACION JSON DINAMICA------------------------------------------------------------------------------------------
+// Importación estática de un archivo JSON
+import configData1 from './config-data.json' with { type: 'json' };
+
+// Importación dinámica de un archivo JSON
+const configData2 = await import('./config-data.json', { with: { type: 'json' } });
+
+
+// HELPERS PARA ITERADORES ------------------------------------------------------------------------------------------
+//Métodos que devuelven iteradores (para encadenar llamadas):
+
+iterator.filter(filterFn)
+iterator.map(mapFn)
+iterator.flatMap(mapFn)
+//Métodos que devuelven booleanos:
+
+iterator.some(fn)
+iterator.every(fn)
+//Métodos que devuelven otros valores:
+
+iterator.find(fn)
+iterator.reduce(reducer, initialValue)
+//Métodos que no devuelven valores pero operan sobre los elementos:
+
+iterator.forEach(fn)
+//Además de los anteriores, que ya conoces de las matrices (arrays), existen otros métodos únicos para trabajo con iteradores:
+
+iterator.drop(limit)//: devuelve un nuevo iterador sin los primeros limit elementos.
+iterator.take(limit)//: devuelve un iterador con tan solo los primeros limit elementos.
+iterator.toArray()//: devuelve los elementos del iterador en forma de un Array.
+
+
+//Qué ventajas ofrecen los métodos de Iteradores sobre los métodos de Array?
+
+//Los métodos de Iteradores ofrecen mejoras especialmente para el rendimiento y la flexibilidad para trabajar con datos:
+
+//Versatilidad con cualquier estructura de datos iterable: a diferencia de los métodos de Array que solo funcionan con 
+// arrays, claro, los métodos de iterador se pueden usar con cualquier estructura de datos iterable, como Set o Map,
+// permitiéndonos filtrar y mapear directamente estos tipos de colecciones. Teniendo en cuenta que la mayor parte de 
+// las manipulaciones de nodos del DOM se hacen con interadores de tipo HTMLCollection o Nodelist, la existencia de 
+// estos operadores es una gran ventaja.
+
+//Procesamiento incremental y sin arrays intermedios: una de las mayores ventajas es que los métodos de iterador es 
+// que no crean arrays intermedios y además manejan los datos de forma incremental. Esto es especialmente útil para 
+// grandes cantidades de datos. Con los métodos de Array (filtrado, mapeo...), la primera operación se aplica a todos 
+// los valores, la segunda se aplica a todos los resultados de la primera, etc... lo que genera arrays temporales 
+// innecesarios y consume más memoria. Con estos operadores de iterador, todas las operaciones se aplican a cada 
+// valor, sin generar elementos temporales.
+
+//El uso práctico de estas funcionalidades se traduce en el procesamiento más eficiente de grandes volúmenes de datos, 
+// con más rendimiento, donde cada paso se calcula "sobre la marcha", sin necesidad de almacenar colecciones completas 
+// en memoria entre las operaciones. Esto es fundamental para construir aplicaciones más rápidas y eficientes.
+
+
+// Nuevos métodos para conjuntos de datos (Set)-----------------------------------------------------------------------
+
+
+// Combinación de conjuntos de datos:
+
+Set.prototype.intersection(other)
+Set.prototype.union(other)
+Set.prototype.difference(other)
+Set.prototype.symmetricDifference(other)
+
+// Comprobación de relaciones entre conjuntos de datos:
+
+Set.prototype.isSubsetOf(other)
+Set.prototype.isSupersetOf(other)
+Set.prototype.isDisjointFrom(other)
+
+
+// El uso práctico de estas nuevas funcionalidades es que simplifican muchísimo la lógica necesaria para 
+// realizar operaciones comunes entre conjuntos de datos, lo que se traduce en código más limpio y menos 
+// propenso a errores. Permiten a los desarrolladores realizar directamente uniones, intersecciones y 
+// comprobaciones de subconjuntos o superconjuntos de manera nativa, mejorando la eficiencia al trabajar 
+// con estructuras de datos Set.
+
+
+//Mejoras en Expresiones Regulares (RegExp)-----------------------------------------------------------------------------------
+
+
+RegExp.escape('texto a escapear')
+// permite "escapear" texto para que utilizarlo de forma segura dentro de otra expresión regular. 
+// Garantizar que cualquier carácter especial en el texto de entrada será interpretado literalmente 
+// por la expresión regular, evitando así comportamientos inesperados o errores de sintaxis.
+// Flags en línea: permiten aplicar banderas (flags) a partes específicas de una expresión regular, 
+// en lugar de a toda la expresión, como hasta ahora. Esto nos da una flexibilidad mucho mayor, permitiendo, 
+// por ejemplo, que una sección de la expresión sea insensible a mayúsculas y minúsculas (i), mientras que 
+// otras secciones no lo sean. Por ejemplo: /^x(?i:HELLO)x$/. En este caso el flag i 
+// (de insensible a mayúsculas/minúsculas) se aplica solo a la cadena HELLO. Así, xHELLOx y xhellox serán 
+// coincidencia pero XhelloX no (porque las dos X alrededor están en mayúsculas) al no estar afectadas por ese flag.
+
+// Grupos de captura con nombre duplicados: ahora es posible utilizar el mismo nombre de grupo de captura dos 
+//veces, siempre y cuando aparezcan en alternativas diferentes dentro de la expresión regular. Por ejemplo, 
+//la expresión regular /(?<chars>a+)|(?<chars>b+)/v puede capturar una secuencia de "aes" o una secuencia de 
+// "bes" bajo el mismo nombre de grupo chars. Si se ejecuta con 'aaa', el grupo chars contendrá 'aaa', y si se 
+// ejecuta con 'bb', contendrá 'bb'. Esto simplifica la construcción de expresiones regulares complejas que 
+// necesitan capturar información de diferentes patrones posibles.
+
+
+//Mezcla de código síncrono y asíncrono en promesas-----------------------------------------------------------------------
+
+
+//La utilidad principal de Promise.try() radica en asegurar que cualquier error lanzado por una función síncrona 
+// sea capturado y manejado como un rechazo de Promesa, de la misma manera que lo sería una operación asíncrona. 
+// Esto simplifica el manejo de errores y la estructura del código cuando se combinan operaciones síncronas y 
+// asíncronas en una secuencia de Promesas.
+
+//En este ejemplo, Promise.try() envuelve la llamada a obtenerUsuarioActual(), una función síncrona que podría fallar. 
+// Si obtenerUsuarioActual() lanza un error, Promise.try() lo convierte automáticamente en un rechazo de la Promesa, 
+// permitiendo que sea capturado por el bloque .catch(). Si la función síncrona funciona, su resultado se pasa a la 
+// función asíncrona procesarDatosDeUsuario(), continuando la cadena de Promesas de manera fluida.
+// Antes de Promise.try(), para lograr un comportamiento similar teníamos que recurrir a patrones que implicaban 
+// el uso explícito del constructor new Promise() junto con bloques try...catch específicos. Esto simplifica el 
+// trabajo en este tipo de situaciones.
+
+
+
+
+
+
+
+
 
     //-----destructuracion
     let obj ={
@@ -220,7 +346,40 @@
 
 //17.-break continue----------------------------------------------------------------------------------------------------------------------------
 
+// La sentencia break
+//La instrucción break se utiliza para salir inmediatamente de un bucle, sin importar si la condición de 
+// finalización se ha cumplido o no. Una vez que se ejecuta, el programa continúa con la siguiente línea 
+// de código después del bucle.
+
+//La sentencia continue
+//A diferencia de break, continue no detiene el bucle por completo. Lo que hace es "saltarse" 
+//el resto del código dentro de la iteración actual y saltar directamente a la siguiente repetición del bucle.
+
+
 //19.-objetos literales------------------------------------------------------------------------------------------------------------------------
+
+// En JavaScript, un objeto literal es una de las formas más sencillas y potentes de agrupar datos y 
+// funcionalidades. Se define utilizando llaves {} para contener una lista de pares clave: valor.
+
+//Piensa en ellos como un "contenedor" donde puedes guardar información relacionada bajo nombres específicos 
+// en lugar de usar índices numéricos como en los arrays.
+
+const usuario = {
+    nombre: "Alex",
+    edad: 28,
+    estaActivo: true,
+    saludar: function() {
+      return "¡Hola!";
+    }
+  };
+
+  // Modificar o agregar
+usuario.edad = 29; 
+usuario["ciudad"] = "Madrid";
+
+// Eliminar
+delete usuario.estaActivo;
+
 
 //20.-parametro rest & operador spread --------------------------------------------------------------------------------------------------------
 //el parametro REST se agrega para un posibles datos que se ingresen ,se suelen usar en librerias reactivas
@@ -251,6 +410,25 @@
 
 
 //28.-objeto Math-----------------------------------------------------------------------------------------------------------------------------
+
+  //matematicas en javascript
+  console.log(Math.PI)
+  console.log(Math.E)
+  console.log(Math.SQRT2)
+  console.log(Math.SQRT1_2)
+  console.log(Math.LN2)
+  console.log(Math.LN10)
+  console.log(Math.LOG2E)
+  console.log(Math.LOG10E)
+  console.log(Math.pow(2,3))
+  console.log(Math.sqrt(16))
+  console.log(Math.cbrt(27))
+  console.log(Math.hypot(3,4))
+  console.log(Math.sin(Math.PI/2))
+  console.log(Math.cos(Math.PI/2))
+  console.log(Math.tan(Math.PI/2))
+  //...
+  //...
 
 //29.-operador de corto circuito--------------------------------------------------------------------------------------------------------------
 //CORTOCIRCUITO OR - cuando el valor de la izquierda en la 
@@ -289,13 +467,15 @@
 
 //30.- Alert , confirm y prompt-----------------------------------------------------------------------------------------------------------------
 
-//31.-Expreciones regulares------------------------------------------------------------------------------------------------------------------
+//31.-Expresiones regulares------------------------------------------------------------------------------------------------------------------
 
 //32.-funciones anonimas autoejecutables--------------------------------------------------------------------------------------------------
 
 //encapsula el codigo , un ejemplo se puedes poner dos variables de igual nombre y no causa conflicto ya que una esta encapsulada 
 //y estan en contextos diferentes
+
 // se usaban antes
+
 // (function (d,w,c) {
 //   a="jean"
 //   console.info(`hola mi nombre es ${a}`)
@@ -458,7 +638,28 @@
             // 2.- una propiedad normal tambien con "NOMBRE"
 
         // 50. Sets-------------------------------------------------------------------------------------------------------------------
-            //ver clase
+            //En JavaScript, un Set es una colección especial de valores donde cada valor debe ser único. A diferencia 
+            // de un Array, un Set no permite duplicados, lo que lo convierte en la herramienta perfecta para limpiar 
+            // listas o gestionar colecciones de elementos únicos (como IDs de usuarios o etiquetas).
+
+        //Características Principales
+            //Unicidad: Si intentas agregar un valor que ya existe, el Set simplemente lo ignorará.
+            // Orden: Los elementos se mantienen en el orden en que fueron insertados.
+            // Cualquier tipo: Puedes guardar strings, números, objetos o incluso otros Sets.
+
+            new Set([iterable]) //Constructor para crear un nuevo conjunto.,Un array u objeto iterable (opcional).,Un nuevo objeto Set.
+            add(valor) //Añade un nuevo elemento al final del conjunto.,El valor a añadir.,El objeto Set (permite encadenar).
+            delete(valor) //Elimina un elemento específico del conjunto.,El valor a eliminar.,"true si existía, false si no."
+            has(valor) //Comprueba si un valor existe en el conjunto.,El valor a buscar.,Boolean (true/false).
+            clear() //Elimina todos los elementos del conjunto.,Ninguna.,undefined.
+            size() //Propiedad que indica cuántos elementos hay.,N/A (Propiedad).,Número entero.
+
+
+            // Característica Array - Set
+            // 1. Duplicados,Permitidos.,No permitidos.
+            // 2. Acceso,Por índice (arr[0]).,No tiene índices (se usa .has()).
+            // 3. Rendimiento,Lento para buscar elementos (indexOf).,Muy rápido para verificar existencia.
+            // 4. Uso principal,Listas ordenadas con acceso aleatorio.,Colecciones de elementos únicos y búsquedas rápidas.
 
         // 51. Maps-------------------------------------------------------------------------------------------------------------------
             //SON OBJETOSson un conjunto de datos qeu tienen una relacion funcionan algo parecido 
@@ -483,14 +684,75 @@
             //ver clase
             // nuevos tipos de datos EM6, como hermanos de set y map 
             // creo que son funcinales para programacion reactiva
+
+
+
         // 53. Iterables & Iterators-----------------------------------------------------------------------------------------------------
             //ver clase
+            // grandes cantidades de datos - escrbir con generators?
         // 54. Generators----------------------------------------------------------------------------------------------------------------
-            //ver clase
+            //Los Generadores son funciones especiales que pueden pausar su ejecución y reanudarse más tarde, 
+            // manteniendo su contexto (el valor de sus variables). Son la forma más sencilla y elegante de crear 
+            // Iteradores en JavaScript.
+
+            // Se definen con la sintaxis function* y utilizan la palabra clave yield para devolver valores uno por uno.
+
+            // 1. ¿Cómo funcionan?
+            // Cuando llamas a una función generadora, esta no ejecuta su código inmediatamente. En su lugar, 
+            // devuelve un objeto Iterador (el generador propiamente dicho). El código solo se ejecuta cuando llamas 
+            // al método .next().
+
+            function* contador() {
+                yield 1;
+                yield 2;
+                yield 3;
+              }
+              
+              const gen = contador(); // No imprime nada aún
+              
+              console.log(gen.next()); // { value: 1, done: false }
+              console.log(gen.next()); // { value: 2, done: false }
+              console.log(gen.next()); // { value: 3, done: false }
+              console.log(gen.next()); // { value: undefined, done: true }
+
+              // Ventajas de los Generadores
+              // Ahorro de Memoria: Puedes generar secuencias infinitas (como una serie de Fibonacci) sin colapsar la RAM, ya que solo existe un número a la vez.
+              // Código Asíncrono más limpio: Antes de async/await, los generadores eran la base para manejar promesas de forma secuencial.
+              // Comunicación bidireccional: No solo sacas datos del generador; puedes meter datos nuevos en cada paso usando gen.next(nuevoValor).  
+
         // 55. Proxies-------------------------------------------------------------------------------------------------------------------
-            // ver clase
+
+            // En JavaScript, un Proxy es un objeto que envuelve a otro objeto (llamado target) y te permite interceptar 
+            // y rediseñar operaciones fundamentales, como la lectura de propiedades, la asignación, la enumeración o 
+            // incluso la invocación de funciones.
+            //Es, esencialmente, un "guardaespaldas" o un intermediario que decide qué sucede cuando alguien intenta 
+            // interactuar con el objeto original.
+
+
+            //1. Validación y Seguridad en Tiempo de Real (Runtime)
+            // A diferencia de TypeScript (que desaparece cuando el código se ejecuta), los Proxies protegen 
+            // tus datos mientras la app corre.Caso de UsoFuncionalidadEsquemas de DatosImpedir que se guarden 
+            // valores con el tipo incorrecto desde una API.Propiedades PrivadasSimular propiedades "realmente" 
+            // privadas ocultándolas del operador in o de Object.keys().InmutabilidadCrear versiones de "solo 
+            // lectura" de un objeto sin usar Object.freeze() (que es irreversible). 
+
+
+            //2. Caché y "Lazy Loading" de Propiedades
+            //Puedes usar un Proxy para que una propiedad no se calcule hasta que alguien intente leerla por primera vez.
+            //Escenario: Tienes un objeto con una propiedad estadisticasComplejas.
+            //Solución con Proxy: El objeto nace vacío. Solo cuando pides objeto.estadisticasComplejas, el Proxy ejecuta el 
+            // cálculo pesado, lo guarda y te lo entrega.            
+
+
+            // 3. Perfilado y Monitorización (Observabilidad)
+            // En entornos de desarrollo complejos, los Proxies se usan para auditar cómo fluye 
+            // la información:
+            // Logging: Registrar cada vez que una función específica es llamada y con qué argumentos.
+            // Analytics: Rastrear qué partes de un estado global están siendo consultadas por qué componentes.
+            // DebuggingPoner: puntos de interrupción automáticos cuando una variable cambia a un valor inesperado.
+
         // 56. Propiedades Dinamicas de los Objetos--------------------------------------------------------------------------------------
-            // irrelevante
+            // irrelevante?
         // 57. This----------------------------------------------------------------------------------------------------------------------
                 
         // esta palabra hacer referencia al objeto en el que estamnos 
@@ -500,7 +762,44 @@
         console.log(this === window) // true
 
         // 58. Call, apply, bind---------------------------------------------------------------------------------------------------------
-            //ver clase
+
+            //En JavaScript, las funciones son objetos, y como tales, tienen métodos propios. call, apply y bind se 
+            // utilizan para establecer manualmente el valor de this, permitiéndonos ejecutar una función en el 
+            // contexto de un objeto específico, sin importar dónde se definió originalmente.
+
+
+            //1. El método call()
+            //Ejecuta la función de inmediato y recibe los argumentos de forma individual (separados por comas). 
+            const persona = { nombre: "Alex" };
+
+            function saludar(ciudad, pais) {
+              console.log(`Hola, soy ${this.nombre} de ${ciudad}, ${pais}`);
+            }
+
+            saludar.call(persona, "Madrid", "España");
+            // Salida: Hola, soy Alex de Madrid, España   
+            
+            
+            //3. El método bind()
+            //A diferencia de los anteriores, bind no ejecuta la función de inmediato. En su lugar, devuelve una nueva 
+            // función que tiene el contexto this permanentemente ligado al objeto que le pases.
+
+            const saludarAlex = saludar.bind(persona, "Barcelona");
+            // ... más tarde en el código ...
+            saludarAlex("España"); 
+            // Salida: Hola, soy Alex de Barcelona, España
+
+
+            // ¿Cuándo usar cada uno?
+            // call: Cuando sabes exactamente qué argumentos pasar y quieres ejecutar la función ya mismo.
+                    // 
+            // apply: Muy útil para funciones que aceptan muchos argumentos, como Math.max.apply(null, numerosArray).
+                    // 
+            // bind: Fundamental en el manejo de eventos (React, DOM) donde quieres que una función mantenga su contexto original aunque sea ejecutada por un botón o un temporizador más tarde.
+                    // 
+            // Nota Pro: En el JavaScript moderno, el operador spread (...) ha hecho que apply sea menos necesario, ya que puedes hacer func.call(this, ...array).
+
+
         // 59. JSON----------------------------------------------------------------------------------------------------------------------
             //ver clase
         // 60. WEB APIs------------------------------------------------------------------------------------------------------------------

@@ -3,10 +3,14 @@
 
 // JavaScript si tiene tipado pero es dinamico, V8 que es el motor de navegadores creado por google
 // y el mas usado , es el que interpreta JavaScript y este solo guarda el espacio en memoria pero con un tipado simple
-// No se como explicarlo exactamente pero El motor V8 si interpreta en si un tipado para hacer optimizaciones y que todo funcione bien
+// Tiene un tipado cambiante cambia sehun se va utilazando 
 // nesecita un tipado, pero este es un tipado debil.
 // RESUMEN: SI TIENE TIPADO PERO ES DINAMICO, ES CAMBIANTE
 // TypeScript tiene un tipado fuerte estricto
+// https://www.youtube.com/watch?v=JeyR30L_zmk // Engines de Js
+
+
+
 
 //Cuando la app este terminada, se compilara en js vanilla.
 
@@ -155,7 +159,7 @@ class guitar{
 
     console.log("------------------------------")
 
-
+ 
 // TYPES Y SU GRAN AYUDA -------------------------------------------------------------------------------------------------------------------------------------
 
 type dni = string;
@@ -377,7 +381,8 @@ function metodoGenerico<T>(data: T): T{
     return data;
 }
 const z = metodoGenerico<string>("lo detecta automaticamente como string");
-const w = metodoGenerico<interfacePesonaReadOnly>(miPersona4); // T tambien puede ser una interface, solo acepta objetos creados en base a la interface pasada
+const w = metodoGenerico<interfacePesonaReadOnly>(miPersona4); // T tambien puede ser una interface, 
+// solo acepta objetos creados en base a la interface pasada
 console.log(z)
 
 
@@ -409,7 +414,19 @@ console.log("-------------------------------------------------------------------
 
 
 // OJO CON OVERLOADING DE FUNCIONES-------------------------------------------------------------------------------------------------------------------------------
-  
+// OJO CON OVERLOADING DE FUNCIONES-------------------------------------------------------------------------------------------------------------------------------
+// OJO CON OVERLOADING DE FUNCIONES-------------------------------------------------------------------------------------------------------------------------------
+// OJO CON OVERLOADING DE FUNCIONES-------------------------------------------------------------------------------------------------------------------------------
+// OJO CON OVERLOADING DE FUNCIONES-------------------------------------------------------------------------------------------------------------------------------
+// OJO CON OVERLOADING DE FUNCIONES-------------------------------------------------------------------------------------------------------------------------------
+// OJO CON OVERLOADING DE FUNCIONES-------------------------------------------------------------------------------------------------------------------------------
+// OJO CON OVERLOADING DE FUNCIONES-------------------------------------------------------------------------------------------------------------------------------
+// OJO CON OVERLOADING DE FUNCIONES-------------------------------------------------------------------------------------------------------------------------------
+// OJO CON OVERLOADING DE FUNCIONES-------------------------------------------------------------------------------------------------------------------------------
+// OJO CON OVERLOADING DE FUNCIONES-------------------------------------------------------------------------------------------------------------------------------
+// OJO CON OVERLOADING DE FUNCIONES-------------------------------------------------------------------------------------------------------------------------------
+
+
 // https://www.youtube.com/watch?v=fEwUoHZYIes&list=PL42UNLc8e48RRGwL5VA-TxCP4Kdt3-9-Q&index=2&ab_channel=GentlemanProgramming
 
 // Es un tema un poco mas avanzado

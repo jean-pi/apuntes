@@ -1,6 +1,14 @@
 # Clean Architecture en Front End
 
 
++ Domain: Logica de negocios (lo no depende de la tegnologia) + entidades
++ UseCases: metodos que representan la logica de aplicación
++ Puertos: significado igual a una Interface de typescript, un contrato que no se rompe
++ Adapters: implementa la Interface
+
+
+
+
 ## Separation of concerns
 ## Que es?
 
@@ -14,26 +22,11 @@
     ---
     Desventajas: muy estructurado, muchas reglas, se gasta tiempo en su estruturacion, tengo un proyecto que lo necesito en una semana entonces mejor no lo aplico, no tiene sentido perder tanto tiempo es arquitecturas
     
-## No es un patron de diseño
-    Un patron de diseño son soluciones que ya estan probadas y funcionan ante problemas que tienen todos los programadores
-
-+ EJEMPLOS:
-    + MVC: modelo vista controlados
-    + Factory 
-    + Singleton
-    + Observer
-    + Strategy
-    + Adapter
-    + Builder
-    + State.
-    + entre otros
 
 ## Que habra en este markdown?
->Revisare la arquitectura centrada en el frontend, cambia un poco pero son los mismos principios    
 (lista de reproduccion clean arquitecture:) aqui hay info completa, revisar videos mas actuales en caso de pasar mucho tiempo
 <https://www.youtube.com/watch?v=HU6OfkrIJqQ&list=PL42UNLc8e48TF9l07z_tLGHzmC_d-yfJJ&ab_channel=GentlemanProgramming>
 
-03/12/2023 revisare los videos:
 
 (Cómo estructurar tu project de ReactJs? Aplicamos Clean Architecture en Front End - #part1:)
 <https://www.youtube.com/watch?v=5LqhlCd2_nE&list=PL42UNLc8e48TF9l07z_tLGHzmC_d-yfJJ&index=9&ab_channel=GentlemanProgramming>
@@ -41,12 +34,9 @@
 (Estructuramos en vivo un project de React usando conceptos de Clean Architecture - #part2:)
 <https://www.youtube.com/watch?v=XEcZaKK38fg&list=PL42UNLc8e48TF9l07z_tLGHzmC_d-yfJJ&index=11&ab_channel=GentlemanProgramming>
 
->Este es mi primer paso para entender la clean architectute, revide lo mas fundamental solamente para empezar a aplicarlo a proyectos pequeños, el segundo paso es comprender a profundidad esta arquitectura
-
----
 
 # Codigo atomico
-    Dividir el codigo en las pertes mas pequeñas posibles será falcil de probar. Esto también trae más beneficios, como la reutilización del código, un mejor mantenimiento e incluso un mejor rendimiento; a medida que el código se vuelve más pequeño y mejor organizado y dependiendo del lenguaje / marco que usemos, podríamos terminar con menos ciclos de procesamiento.
+    Dividir el codigo en las partes mas pequeñas posibles será falcil de probar. Esto también trae más beneficios, como la reutilización del código, un mejor mantenimiento e incluso un mejor rendimiento; a medida que el código se vuelve más pequeño y mejor organizado y dependiendo del lenguaje / marco que usemos, podríamos terminar con menos ciclos de procesamiento.
 
 # Clean architecture para frontend
 
@@ -134,8 +124,4 @@
     });
 
 </code>
-
-
-# No entieno la funion exacta de las carpetas service e interceptor
-
 
